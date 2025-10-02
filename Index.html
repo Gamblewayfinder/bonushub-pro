@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonusHub.bet - Premium Casino Bonuses & Exclusive Deals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a2332 0%, #2a3441 100%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #1a2332 0%, #2a3441 50%, #1a2332 100%);
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #a0a9b8;
+            margin-bottom: 30px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffd700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #a0a9b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Casino Cards */
+        .casinos-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #ffd700;
+            margin-bottom: 50px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .casinos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .casino-card {
+            background: linear-gradient(135deg, #2a3441 0%, #3a4551 100%);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #4a5561;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .casino-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .casino-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+        }
+
+        .casino-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .casino-icon {
+            font-size: 32px;
+            margin-right: 15px;
+        }
+
+        .casino-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .hot-badge {
+            background: linear-gradient(45deg, #ff4757, #ff6b7a);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: auto;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .bonus-amount {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffd700;
+            margin: 15px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .casino-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .casino-features li {
+            color: #a0a9b8;
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .casino-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        .claim-button {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #1a2332;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .claim-button:hover {
+            background: linear-gradient(45deg, #ffed4e, #ffd700);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Trust Section */
+        .trust-section {
+            background: linear-gradient(135deg, #2a3441 0%, #1a2332 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .trust-title {
+            font-size: 32px;
+            color: #ffd700;
+            margin-bottom: 30px;
+        }
+
+        .trust-features {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .trust-icon {
+            font-size: 48px;
+            color: #4ecdc4;
+            margin-bottom: 15px;
+        }
+
+        .trust-text {
+            color: #a0a9b8;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a2332;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 2px solid #2a3441;
+        }
+
+        .footer-text {
+            color: #a0a9b8;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 36px;
+            }
+
+            .tagline {
+                font-size: 18px;
+            }
+
+            .stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .casinos-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .casino-card {
+                padding: 20px;
+            }
+
+            .trust-features {
+                gap: 30px;
+            }
+
+            .trust-icon {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .header {
+                padding: 40px 0;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+
+            .casinos-section {
+                padding: 40px 0;
+            }
+
+            .trust-section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="logo">💎 BonusHub Pro</h1>
+            <p class="tagline">Premium Casino Bonuses & Exclusive Deals</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Partners</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">€100K+</span>
+                    <span class="stat-label">Bonuses</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Happy Users</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Casinos Section -->
+        <section class="casinos-section">
+            <h2 class="section-title">🎰 Top Casino Bonuses</h2>
+            
+            <div class="casinos-grid">
+                <!-- Casino 1 -->
+                <div class="casino-card">
+                    <div class="casino-header">
+                        <span class="casino-icon">👑</span>
+                        <h3 class="casino-name">Royal Spin Casino</h3>
+                        <span class="hot-badge">Hot Deal</span>
+                    </div>
+                    <div class="bonus-amount">100% up to €500 + 200 Free Spins</div>
+                    <ul class="casino-features">
+                        <li>Licensed & Secure</li>
+                        <li>Instant Bonuses</li>
+                        <li>Mobile Optimized</li>
+                        <li>24/7 Support</li>
+                    </ul>
+                    <button class="claim-button">Claim Bonus</button>
+                </div>
+
+                <!-- Casino 2 -->
+                <div class="casino-card">
+                    <div class="casino-header">
+                        <span class="casino-icon">🏰</span>
+                        <h3 class="casino-name">Golden Palace</h3>
+                    </div>
+                    <div class="bonus-amount">€1000 Welcome Package + 300 FS</div>
+                    <ul class="casino-features">
+                        <li>VIP Program</li>
+                        <li>High Roller Bonuses</li>
+                        <li>Personal Manager</li>
+                        <li>Fast Withdrawals</li>
+                    </ul>
+                    <button class="claim-button">Claim Bonus</button>
+                </div>
+
+                <!-- Casino 3 -->
+                <div class="casino-card">
+                    <div class="casino-header">
+                        <span class="casino-icon">⭐</span>
+                        <h3 class="casino-name">Lucky Stars Casino</h3>
+                        <span class="hot-badge">No Deposit</span>
+                    </div>
+                    <div class="bonus-amount">50 Free Spins - No Deposit</div>
+                    <ul class="casino-features">
+                        <li>No Deposit Required</li>
+                        <li>Mobile Optimized</li>
+                        <li>Quick Registration</li>
+                        <li>Instant Play</li>
+                    </ul>
+                    <button class="claim-button">Claim Bonus</button>
+                </div>
+
+                <!-- Casino 4 -->
+                <div class="casino-card">
+                    <div class="casino-header">
+                        <span class="casino-icon">💎</span>
+                        <h3 class="casino-name">Diamond Bet</h3>
+                        <span class="hot-badge">Exclusive</span>
+                    </div>
+                    <div class="bonus-amount">200% up to €1000 + 500 FS</div>
+                    <ul class="casino-features">
+                        <li>Exclusive Offer</li>
+                        <li>Fast Payouts</li>
+                        <li>Live Dealers</li>
+                        <li>Crypto Accepted</li>
+                    </ul>
+                    <button class="claim-button">Claim Bonus</button>
+                </div>
+
+                <!-- Casino 5 -->
+                <div class="casino-card">
+                    <div class="casino-header">
+                        <span class="casino-icon">🎲</span>
+                        <h3 class="casino-name">Mega Fortune</h3>
+                    </div>
+                    <div class="bonus-amount">150% up to €750 + 100 FS</div>
+                    <ul class="casino-features">
+                        <li>Weekly Cashback</li>
+                        <li>Tournament Prizes</li>
+                        <li>Mobile App</li>
+                        <li>Live Chat 24/7</li>
+                    </ul>
+                    <button class="claim-button">Claim Bonus</button>
+                </div>
+
+                <!-- Casino 6 -->
+                <div class="casino-card">
+                    <div class="casino-header">
+                        <span class="casino-icon">🃏</span>
+                        <h3 class="casino-name">Ace High Casino</h3>
+                        <span class="hot-badge">New</span>
+                    </div>
+                    <div class="bonus-amount">300% up to €600 + 150 FS</div>
+                    <ul class="casino-features">
+                        <li>Brand New Casino</li>
+                        <li>Latest Games</li>
+                        <li>Instant Deposits</li>
+                        <li>Loyalty Program</li>
+                    </ul>
+                    <button class="claim-button">Claim Bonus</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="trust-section">
+            <h2 class="trust-title">Trusted by 10,000+ Players</h2>
+            <div class="trust-features">
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <p class="trust-text">SSL Encrypted & Licensed Casinos Only</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <p class="trust-text">Instant Bonus Activation & Fast Payouts</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🎯</div>
+                    <p class="trust-text">Hand-Picked Exclusive Deals & Offers</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">📱</div>
+                    <p class="trust-text">Mobile Optimized & Responsive Design</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2025 BonusHub Pro. Licensed & Regulated. Gamble Responsibly.</p>
+            <p class="footer-text">🌟 Your Gateway to Premium Casino Bonuses 🌟</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add click functionality to claim buttons
+        document.querySelectorAll('.claim-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Add animation effect
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+                
+                // You can add actual redirect logic here
+                alert('Redirecting to casino... (This is a demo)');
+            });
+        });
+
+        // Add smooth scrolling for better UX
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+</body>
+</html>
