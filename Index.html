@@ -1,501 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BonusHub.bet - Premium Casino Bonuses & Exclusive Deals</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BonusHub.bet - Premium Casino Bonuses & Exclusive Deals</title>
+  <meta name="description" content="Discover premium casino bonus deals, exclusive offers, and trusted gaming sites. Hand-picked partners, expert reviews, and mobile-optimized experience." />
+  <style>
+    :root{
+      /* Background */
+      --bg-1:#0b0f17;         /* dziļi tumšs */
+      --bg-2:#111827;         /* nedaudz gaišāks */
+      --bg-3:#182033;         /* starpslānis */
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a2332 0%, #2a3441 100%);
-            color: white;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
+      /* Cards / paneļi */
+      --card:#131a29;
+      --card-2:#1b2336;
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      /* Akcenti */
+      --gold:#f5d061;         /* mīksts zelts */
+      --gold-2:#ffd66b;       /* gaišāks zelts */
+      --teal:#47e7d5;         /* tirkīza neons */
+      --pink:#ff5ba6;         /* fuksija/rozā neons */
+      --lime:#7efc6b;         /* limetzaļš CTA */
 
-        /* Header */
-        .header {
-            text-align: center;
-            padding: 60px 0;
-            background: linear-gradient(135deg, #1a2332 0%, #2a3441 50%, #1a2332 100%);
-        }
+      /* Teksts un palīgtonis */
+      --white:#ffffff;
+      --muted:#a9b4c8;
 
-        .logo {
-            font-size: 48px;
-            font-weight: bold;
-            color: #ffd700;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+      /* Efekti */
+      --shadow:rgba(0,0,0,0.45);
+      --gold-glow:rgba(245,208,97,0.28);
+      --neon-glow:rgba(71,231,213,0.28);
+      --pink-glow:rgba(255,91,166,0.26);
+      --blur:12px;
 
-        .tagline {
-            font-size: 20px;
-            color: #a0a9b8;
-            margin-bottom: 30px;
-        }
+      --radius:16px;
+      --radius-sm:12px;
+      --radius-lg:22px;
+      --speed:.26s;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 15% -10%, #1a2340 0%, transparent 60%),
+                  radial-gradient(1000px 700px at 100% 0%, #201a3a 0%, transparent 55%),
+                  linear-gradient(135deg, var(--bg-2) 0%, var(--bg-1) 100%);
+      color:var(--white);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    
+    /* Header / Hero */
+    .hero{
+      position:relative;
+      padding:80px 0 40px;
+      backdrop-filter:saturate(1.2);
+    }
+    .hero-inner{
+      display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;
+      padding:8px 14px;border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 8px 24px rgba(0,0,0,0.25) inset, 0 8px 22px var(--neon-glow);
+      backdrop-filter:blur(var(--blur));
+      font-weight:700;letter-spacing:.3px
+    }
+    .brand .gem{font-size:20px}
+    .brand .name{color:var(--gold)}
+    .hero h1{
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight:800;
+      line-height:1.15;
+      text-shadow: 0 10px 30px var(--shadow);
+      background: linear-gradient(180deg, #fff 0%, #e9eef8 55%, #cbd6ea 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .hero p{
+      max-width:760px;color:var(--muted);font-size: clamp(14px, 2.3vw, 18px)
+    }
+    .stats{
+      margin-top:10px;display:flex;flex-wrap:wrap;gap:28px;justify-content:center
+    }
+    .stat{
+      min-width:170px;background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding:16px 18px;text-align:left;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+      backdrop-filter: blur(14px);
+    }
+    .stat-number{display:block;font-weight:800;color:var(--gold);font-size:22px}
+    .stat-label{font-size:12px;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
 
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
+    /* Trust strip */
+    .trust-strip{
+      margin:22px 0 0;padding:14px 18px;text-align:center;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 6px 22px var(--neon-glow);
+      color:var(--muted)
+    }
+    .trust-strip strong{color:#eaf7ff}
 
-        .stat {
-            text-align: center;
-        }
+    /* Hot Deals */
+    .section{
+      padding:50px 0 10px;
+    }
+    .section-title{
+      font-size: clamp(22px,3.4vw,32px);
+      margin-bottom:18px;
+      color:var(--gold);
+      text-align:center;
+      text-shadow: 0 10px 32px var(--gold-glow);
+    }
+    .subtitle{
+      text-align:center;color:var(--muted);margin-bottom:26px
+    }
+    .grid{
+      display:grid;gap:24px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card{
+      position:relative;overflow:hidden;
+      background: linear-gradient(135deg, var(--card) 0%, var(--card-2) 100%);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding:22px;
+      box-shadow: 0 14px 38px rgba(0,0,0,0.45);
+      transition: transform var(--speed) ease, box-shadow var(--speed) ease, border-color var(--speed) ease, filter var(--speed) ease;
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 18px 48px var(--gold-glow), 0 10px 26px rgba(0,0,0,0.5);
+      filter: saturate(1.08);
+    }
+    .card::before{
+      content:"";position:absolute;inset:0;pointer-events:none;
+      background: linear-gradient(120deg, rgba(255,255,255,0.05), transparent 30%, transparent 70%, rgba(255,255,255,0.06));
+      opacity:.6;mix-blend-mode:overlay;
+    }
+    .card-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+    .icon{font-size:24px}
+    .name{font-weight:800;color:var(--gold);font-size:18px}
+    .badge{
+      margin-left:auto;font-size:11px;font-weight:800;text-transform:uppercase;
+      padding:5px 10px;border-radius:999px;letter-spacing:.6px;
+      background: linear-gradient(45deg, var(--pink), #ff3d85);
+      color:#fff;box-shadow: 0 10px 26px var(--pink-glow);
+      animation: pulse 2.2s infinite;
+    }
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+    .bonus{font-size:20px;font-weight:800;color:var(--gold);margin:10px 0 12px}
+    .features{list-style:none;color:var(--muted);display:grid;gap:6px;margin:8px 0 16px}
+    .features li{position:relative;padding-left:20px}
+    .features li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:900}
+    .cta{
+      width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:13px 16px;border:none;border-radius:12px;cursor:pointer;
+      background: linear-gradient(45deg, var(--lime), #a4ff7f);
+      color:#0e1a24;font-weight:900;letter-spacing:.6px;text-transform:uppercase;
+      transition: transform var(--speed), box-shadow var(--speed);
+      box-shadow: 0 12px 34px rgba(126,252,107,0.32);
+    }
+    .cta:hover{transform: translateY(-2px);box-shadow: 0 16px 42px rgba(126,252,107,0.42)}
+    .cta:active{transform: translateY(0)}
 
-        .stat-number {
-            font-size: 32px;
-            font-weight: bold;
-            color: #ffd700;
-            display: block;
-        }
+    /* Categories */
+    .categories{
+      margin:36px 0 8px;
+      display:flex;gap:10px;flex-wrap:wrap;justify-content:center
+    }
+    .chip{
+      padding:8px 12px;border-radius:999px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+      color:var(--muted);
+      transition:all var(--speed) ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .chip:hover{color:#eafffb;border-color:var(--teal);box-shadow: 0 6px 18px var(--neon-glow)}
+    .chip.active{color:#0e1a24;background:linear-gradient(45deg, var(--gold), var(--gold-2));border-color:transparent;font-weight:700;box-shadow: 0 8px 22px var(--gold-glow)}
 
-        .stat-label {
-            font-size: 14px;
-            color: #a0a9b8;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    /* Why Choose */
+    .why-grid{display:grid;gap:18px;grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));margin-top:10px}
+    .why-card{
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding:18px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    .why-title{display:flex;align-items:center;gap:10px;font-weight:800;margin-bottom:6px;color:#f1f5ff}
+    .why-text{color:var(--muted)}
 
-        /* Casino Cards */
-        .casinos-section {
-            padding: 80px 0;
-        }
+    /* Newsletter */
+    .newsletter{
+      margin:36px auto 8px;max-width:720px;text-align:center;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);padding:22px;backdrop-filter: blur(8px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+      transition: border-color var(--speed), box-shadow var(--speed);
+    }
+    .newsletter:hover{border-color:var(--gold);box-shadow: 0 14px 36px var(--gold-glow)}
+    .form{
+      margin-top:14px;display:flex;gap:10px;flex-wrap:wrap
+    }
+    .input{
+      flex:1;min-width:220px;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.28);color:#fff;outline:none
+    }
+    .input::placeholder{color:#9aabc4}
+    .btn{
+      padding:12px 16px;border-radius:12px;border:none;cursor:pointer;font-weight:800;
+      background: linear-gradient(45deg, var(--gold), var(--gold-2));color:#0e1a24;
+      box-shadow: 0 12px 30px var(--gold-glow);
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            color: #ffd700;
-            margin-bottom: 50px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
+    /* Contact */
+    .contact{
+      margin:40px 0 8px;display:grid;gap:18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .contact-card{
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .contact-card .label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+    .contact-card .value{font-weight:800;margin-top:6px}
 
-        .casinos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
+    /* Footer */
+    footer{
+      margin-top:36px;border-top:1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    }
+    .footer-inner{padding:20px 0;text-align:center;color:#98a6be;font-size:14px}
+    .footer-inner strong{color:#eaf2ff}
 
-        .casino-card {
-            background: linear-gradient(135deg, #2a3441 0%, #3a4551 100%);
-            border-radius: 15px;
-            padding: 30px;
-            border: 2px solid #4a5561;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .casino-card:hover {
-            transform: translateY(-5px);
-            border-color: #ffd700;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
-        }
-
-        .casino-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
-        }
-
-        .casino-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .casino-icon {
-            font-size: 32px;
-            margin-right: 15px;
-        }
-
-        .casino-name {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffd700;
-        }
-
-        .hot-badge {
-            background: linear-gradient(45deg, #ff4757, #ff6b7a);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: auto;
-            text-transform: uppercase;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .bonus-amount {
-            font-size: 28px;
-            font-weight: bold;
-            color: #ffd700;
-            margin: 15px 0;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
-        .casino-features {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .casino-features li {
-            color: #a0a9b8;
-            margin: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .casino-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #4ecdc4;
-            font-weight: bold;
-        }
-
-        .claim-button {
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #1a2332;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .claim-button:hover {
-            background: linear-gradient(45deg, #ffed4e, #ffd700);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
-        }
-
-        /* Trust Section */
-        .trust-section {
-            background: linear-gradient(135deg, #2a3441 0%, #1a2332 100%);
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .trust-title {
-            font-size: 32px;
-            color: #ffd700;
-            margin-bottom: 30px;
-        }
-
-        .trust-features {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .trust-item {
-            text-align: center;
-            max-width: 200px;
-        }
-
-        .trust-icon {
-            font-size: 48px;
-            color: #4ecdc4;
-            margin-bottom: 15px;
-        }
-
-        .trust-text {
-            color: #a0a9b8;
-            font-size: 16px;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1a2332;
-            padding: 40px 0;
-            text-align: center;
-            border-top: 2px solid #2a3441;
-        }
-
-        .footer-text {
-            color: #a0a9b8;
-            font-size: 14px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 36px;
-            }
-
-            .tagline {
-                font-size: 18px;
-            }
-
-            .stats {
-                gap: 30px;
-            }
-
-            .stat-number {
-                font-size: 24px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .casinos-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .casino-card {
-                padding: 20px;
-            }
-
-            .trust-features {
-                gap: 30px;
-            }
-
-            .trust-icon {
-                font-size: 36px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .header {
-                padding: 40px 0;
-            }
-
-            .logo {
-                font-size: 28px;
-            }
-
-            .tagline {
-                font-size: 16px;
-            }
-
-            .casinos-section {
-                padding: 40px 0;
-            }
-
-            .trust-section {
-                padding: 40px 0;
-            }
-        }
-    </style>
+    /* Responsive tweaks */
+    @media (max-width: 768px){
+      .stat{min-width:140px}
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <h1 class="logo">💎 BonusHub Pro</h1>
-            <p class="tagline">Premium Casino Bonuses & Exclusive Deals</p>
-            
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Partners</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">€100K+</span>
-                    <span class="stat-label">Bonuses</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">10K+</span>
-                    <span class="stat-label">Happy Users</span>
-                </div>
-            </div>
-        </header>
-
-        <!-- Casinos Section -->
-        <section class="casinos-section">
-            <h2 class="section-title">🎰 Top Casino Bonuses</h2>
-            
-            <div class="casinos-grid">
-                <!-- Casino 1 -->
-                <div class="casino-card">
-                    <div class="casino-header">
-                        <span class="casino-icon">👑</span>
-                        <h3 class="casino-name">Royal Spin Casino</h3>
-                        <span class="hot-badge">Hot Deal</span>
-                    </div>
-                    <div class="bonus-amount">100% up to €500 + 200 Free Spins</div>
-                    <ul class="casino-features">
-                        <li>Licensed & Secure</li>
-                        <li>Instant Bonuses</li>
-                        <li>Mobile Optimized</li>
-                        <li>24/7 Support</li>
-                    </ul>
-                    <button class="claim-button">Claim Bonus</button>
-                </div>
-
-                <!-- Casino 2 -->
-                <div class="casino-card">
-                    <div class="casino-header">
-                        <span class="casino-icon">🏰</span>
-                        <h3 class="casino-name">Golden Palace</h3>
-                    </div>
-                    <div class="bonus-amount">€1000 Welcome Package + 300 FS</div>
-                    <ul class="casino-features">
-                        <li>VIP Program</li>
-                        <li>High Roller Bonuses</li>
-                        <li>Personal Manager</li>
-                        <li>Fast Withdrawals</li>
-                    </ul>
-                    <button class="claim-button">Claim Bonus</button>
-                </div>
-
-                <!-- Casino 3 -->
-                <div class="casino-card">
-                    <div class="casino-header">
-                        <span class="casino-icon">⭐</span>
-                        <h3 class="casino-name">Lucky Stars Casino</h3>
-                        <span class="hot-badge">No Deposit</span>
-                    </div>
-                    <div class="bonus-amount">50 Free Spins - No Deposit</div>
-                    <ul class="casino-features">
-                        <li>No Deposit Required</li>
-                        <li>Mobile Optimized</li>
-                        <li>Quick Registration</li>
-                        <li>Instant Play</li>
-                    </ul>
-                    <button class="claim-button">Claim Bonus</button>
-                </div>
-
-                <!-- Casino 4 -->
-                <div class="casino-card">
-                    <div class="casino-header">
-                        <span class="casino-icon">💎</span>
-                        <h3 class="casino-name">Diamond Bet</h3>
-                        <span class="hot-badge">Exclusive</span>
-                    </div>
-                    <div class="bonus-amount">200% up to €1000 + 500 FS</div>
-                    <ul class="casino-features">
-                        <li>Exclusive Offer</li>
-                        <li>Fast Payouts</li>
-                        <li>Live Dealers</li>
-                        <li>Crypto Accepted</li>
-                    </ul>
-                    <button class="claim-button">Claim Bonus</button>
-                </div>
-
-                <!-- Casino 5 -->
-                <div class="casino-card">
-                    <div class="casino-header">
-                        <span class="casino-icon">🎲</span>
-                        <h3 class="casino-name">Mega Fortune</h3>
-                    </div>
-                    <div class="bonus-amount">150% up to €750 + 100 FS</div>
-                    <ul class="casino-features">
-                        <li>Weekly Cashback</li>
-                        <li>Tournament Prizes</li>
-                        <li>Mobile App</li>
-                        <li>Live Chat 24/7</li>
-                    </ul>
-                    <button class="claim-button">Claim Bonus</button>
-                </div>
-
-                <!-- Casino 6 -->
-                <div class="casino-card">
-                    <div class="casino-header">
-                        <span class="casino-icon">🃏</span>
-                        <h3 class="casino-name">Ace High Casino</h3>
-                        <span class="hot-badge">New</span>
-                    </div>
-                    <div class="bonus-amount">300% up to €600 + 150 FS</div>
-                    <ul class="casino-features">
-                        <li>Brand New Casino</li>
-                        <li>Latest Games</li>
-                        <li>Instant Deposits</li>
-                        <li>Loyalty Program</li>
-                    </ul>
-                    <button class="claim-button">Claim Bonus</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Trust Section -->
-        <section class="trust-section">
-            <h2 class="trust-title">Trusted by 10,000+ Players</h2>
-            <div class="trust-features">
-                <div class="trust-item">
-                    <div class="trust-icon">🔒</div>
-                    <p class="trust-text">SSL Encrypted & Licensed Casinos Only</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">⚡</div>
-                    <p class="trust-text">Instant Bonus Activation & Fast Payouts</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">🎯</div>
-                    <p class="trust-text">Hand-Picked Exclusive Deals & Offers</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">📱</div>
-                    <p class="trust-text">Mobile Optimized & Responsive Design</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-text">&copy; 2025 BonusHub Pro. Licensed & Regulated. Gamble Responsibly.</p>
-            <p class="footer-text">🌟 Your Gateway to Premium Casino Bonuses 🌟</p>
+  <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="brand">
+          <span class="gem">💎</span>
+          <span class="name">BonusHub Pro</span>
         </div>
-    </footer>
+        <h1>Discover Premium Bonus Deals</h1>
+        <p>Find the best online bonuses, exclusive deals, and trusted gaming sites. Start winning today with our hand-picked partners.</p>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Partners</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">€100K+</span>
+            <span class="stat-label">Bonuses</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Happy Users</span>
+          </div>
+        </div>
+        <div class="trust-strip">Trusted by <strong>10,000+</strong> Players</div>
+      </div>
+    </section>
 
-    <script>
-        // Add click functionality to claim buttons
-        document.querySelectorAll('.claim-button').forEach(button => {
-            button.addEventListener('click', function() {
-                // Add animation effect
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 150);
-                
-                // You can add actual redirect logic here
-                alert('Redirecting to casino... (This is a demo)');
-            });
-        });
+    <!-- HOT DEALS -->
+    <section class="section">
+      <h2 class="section-title">🔥 Hot Deals</h2>
+      <p class="subtitle">Limited time offers from our top-rated partners with the best bonuses and highest ratings.</p>
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-head">
+            <div class="icon">👑</div>
+            <div class="name">Royal Spin Casino</div>
+            <div class="badge">Hot</div>
+          </div>
+          <div class="bonus">100% up to €500 · 200 Free Spins</div>
+          <ul class="features">
+            <li>No Wagering</li>
+            <li>Instant Withdrawal</li>
+          </ul>
+          <button class="cta">Claim Bonus</button>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-head">
+            <div class="icon">🏰</div>
+            <div class="name">Golden Palace</div>
+          </div>
+          <div class="bonus">€1000 Welcome Package · 300 Free Spins</div>
+          <ul class="features">
+            <li>High Roller</li>
+            <li>Personal Manager</li>
+          </ul>
+          <button class="cta">Claim Bonus</button>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-head">
+            <div class="icon">⭐</div>
+            <div class="name">Lucky Stars</div>
+            <div class="badge">No Deposit</div>
+          </div>
+          <div class="bonus">50 Free Spins · No Deposit</div>
+          <ul class="features">
+            <li>Mobile Optimized</li>
+            <li>Quick Registration</li>
+          </ul>
+          <button class="cta">Claim Bonus</button>
+        </article>
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card-head">
+            <div class="icon">💎</div>
+            <div class="name">Diamond Bet</div>
+            <div class="badge">Exclusive</div>
+          </div>
+          <div class="bonus">200% up to €1000 · 500 Free Spins</div>
+          <ul class="features">
+            <li>Fast Payouts</li>
+            <li>Live Dealers</li>
+          </ul>
+          <button class="cta">Claim Bonus</button>
+        </article>
+        <!-- Card 5 -->
+        <article class="card">
+          <div class="card-head">
+            <div class="icon">🎲</div>
+            <div class="name">Mega Fortune</div>
+          </div>
+          <div class="bonus">€2000 + 500 FS</div>
+          <ul class="features">
+            <li>VIP Program</li>
+            <li>Exclusive Games</li>
+          </ul>
+          <button class="cta">Claim Bonus</button>
+        </article>
+        <!-- Card 6 -->
+        <article class="card">
+          <div class="card-head">
+            <div class="icon">🃏</div>
+            <div class="name">Ace High Casino</div>
+            <div class="badge">New</div>
+          </div>
+          <div class="bonus">100% up to €300</div>
+          <ul class="features">
+            <li>Mobile App</li>
+            <li>Touch ID</li>
+          </ul>
+          <button class="cta">Claim Bonus</button>
+        </article>
+      </div>
+    </section>
 
-        // Add smooth scrolling for better UX
-        document.documentElement.style.scrollBehavior = 'smooth';
-    </script>
+    <!-- Categories -->
+    <section class="categories" aria-label="Browse by Category">
+      <div class="chip active">All</div>
+      <div class="chip">Welcome</div>
+      <div class="chip">No Deposit</div>
+      <div class="chip">High Roller</div>
+      <div class="chip">Cashback</div>
+      <div class="chip">Crypto</div>
+      <div class="chip">Live Casino</div>
+      <div class="chip">Mobile</div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="section">
+      <h2 class="section-title">Why Choose BonusHub Pro</h2>
+      <p class="subtitle">We've built our reputation on trust, transparency, and delivering exceptional value to our users.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-title">🔍 Expert Reviews</div>
+          <div class="why-text">Professional analysis and testing of every casino partner</div>
+        </div>
+        <div class="why-card">
+          <div class="why-title">💎 Exclusive Bonuses</div>
+          <div class="why-text">Special deals and offers available only through BonusHub Pro</div>
+        </div>
+        <div class="why-card">
+          <div class="why-title">🏆 Trusted Partners</div>
+          <div class="why-text">Only licensed, verified and reputable gaming operators</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+      <h3>Never Miss a Bonus!</h3>
+      <p class="subtitle">Get exclusive deals and the latest bonuses delivered straight to your inbox</p>
+      <form class="form" id="subscribe-form" novalidate>
+        <input class="input" id="email" name="email" type="email" placeholder="your@email.com" required />
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p class="subtitle" style="margin-top:8px">No spam, unsubscribe anytime. We respect your privacy.</p>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="contact-card">
+        <div class="label">Email Us</div>
+        <div class="value">hello@bonushubpro.com</div>
+      </div>
+      <div class="contact-card">
+        <div class="label">Call Us</div>
+        <div class="value">+1 (555) 123-4567</div>
+      </div>
+      <div class="contact-card">
+        <div class="label">Visit Us</div>
+        <div class="value">Our headquarters</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>&copy; <span id="year"></span> <strong>BonusHub Pro</strong>. Licensed & Regulated. Gamble Responsibly.</div>
+      <div>🌟 Your Gateway to Premium Casino Bonuses 🌟</div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+    // CTA clicks
+    document.querySelectorAll('.cta').forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        btn.style.transform='scale(0.98)';
+        setTimeout(()=>btn.style.transform='translateY(-2px)', 150);
+        alert('Redirecting to casino... (demo)');
+      });
+    });
+
+    // Categories active state
+    const chips = document.querySelectorAll('.chip');
+    chips.forEach(ch => ch.addEventListener('click', ()=>{
+      chips.forEach(c=>c.classList.remove('active'));
+      ch.classList.add('active');
+    }));
+
+    // Newsletter validation (front-end only demo)
+    const form = document.getElementById('subscribe-form');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if(!valid){ alert('Please enter a valid email.'); return; }
+      alert('Thanks for subscribing! (demo)');
+      form.reset();
+    });
+  </script>
 </body>
 </html>
