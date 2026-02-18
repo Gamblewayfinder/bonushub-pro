@@ -8,7 +8,7 @@
   <title>BonusHub.bet - Premium Casino Bonuses & Exclusive Deals</title>
   <meta name="description" content="Discover premium casino bonus deals, exclusive offers, and trusted gaming sites. Hand-picked partners, expert reviews, and mobile-optimized experience." />
   <!-- Font Awesome for social icons -->
-  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
     :root{
@@ -175,6 +175,9 @@
     color:#0e1a24;font-weight:900;letter-spacing:.6px;text-transform:uppercase;
     transition: transform var(--speed), box-shadow var(--speed);
     box-shadow: 0 12px 34px rgba(126,252,107,0.32);
+    
+    text-decoration:none;
+    user-select:none;
     }
     .cta:hover{transform: translateY(-2px);box-shadow: 0 16px 42px rgba(126,252,107,0.42)}
     .cta:active{transform: translateY(0)}
@@ -290,6 +293,7 @@
     .stat{min-width:140px}
     .social-links{flex-direction:column}
     }
+  
   </style>
 </head>
 <body>
@@ -323,13 +327,43 @@
 
     <!-- HOT DEALS -->
     <section class="section">
-    <h2 class="section-title">🔥 Hot Deals</h2>
-    <p class="subtitle">Limited time offers from our top-rated partners with the best bonuses and highest ratings.</p>
+    <h2 class="section-title">🔥 Featured Casinos</h2>
+    <p class="subtitle">Our current focus: two partner brands. Read the full review first, then claim the offer.</p>
     <div class="grid">
-    <!-- Card 1 -->
-    <article class="card">
+
+  <!-- Corgibet -->
+  <article class="card">
     <div class="card-head">
-    <div class="icon">👑</div>
+      <div class="icon">🐶</div>
+      <div class="name">Corgibet</div>
+      <div class="badge">DE • AT • NO</div>
+    </div>
+    <div class="bonus">Read the review → then claim the offer</div>
+    <ul class="features">
+      <li>Bonus & key terms</li>
+      <li>Payments & withdrawals</li>
+      <li>Quick “who it fits” verdict</li>
+    </ul>
+    <a class="cta" href="corgibet.html">Read Review</a>
+  </article>
+
+  <!-- MagneticSlots -->
+  <article class="card">
+    <div class="card-head">
+      <div class="icon">🧲</div>
+      <div class="name">MagneticSlots</div>
+      <div class="badge">DE • AT</div>
+    </div>
+    <div class="bonus">Read the review → then claim the offer</div>
+    <ul class="features">
+      <li>Bonus & key terms</li>
+      <li>Payments & withdrawals</li>
+      <li>Quick “who it fits” verdict</li>
+    </ul>
+    <a class="cta" href="magneticslots.html">Read Review</a>
+  </article>
+
+</div>
     <div class="name">Royal Spin Casino</div>
     <div class="badge">Hot</div>
     </div>
@@ -507,17 +541,7 @@
 
     // Smooth scroll
     document.documentElement.style.scrollBehavior = 'smooth';
-
-    // CTA clicks
-    document.querySelectorAll('.cta').forEach(btn=>{
-    btn.addEventListener('click', e=>{
-    btn.style.transform='scale(0.98)';
-    setTimeout(()=>btn.style.transform='translateY(-2px)', 150);
-    alert('Redirecting to casino... (demo)');
-    });
-    });
-
-    // Categories active state
+// Categories active state
     const chips = document.querySelectorAll('.chip');
     chips.forEach(ch => ch.addEventListener('click', ()=>{
     chips.forEach(c=>c.classList.remove('active'));
@@ -535,26 +559,3 @@
     form.reset();
     });
   </script>
-   <!-- Professional Contact Footer 2025 -->
-<div style="background:#111;color:#fff;padding:60px 20px;text-align:center;font-family:Arial,sans-serif;">
-    <h3 style="color:#f5d742;margin-bottom:25px;font-size:26px;">Contact BonusHub</h3>
-    <p style="margin:20px 0;font-size:17px;">
-        <strong>Affiliate & Partnership:</strong><br>
-        <a href="mailto:affiliate@bonushub.bet" style="color:#00ff9d;font-size:19px;text-decoration:none;">affiliate@bonushub.bet</a>
-    </p>
-    
-    <div style="margin:35px 0;font-size:19px;">
-        <a href="https://facebook.com/BonusHub.bet" target="_blank" style="color:#1877f2;margin:0 20px;text-decoration:none;">Facebook</a> • 
-        <a href="https://x.com/bonus_hub" target="_blank" style="color:#1da1f2;margin:0 20px;text-decoration:none;">X (Twitter)</a><br><br>
-        <a href="https://t.me/BonusHubDeals" target="_blank" style="color:#229ed9;margin:0 20px;text-decoration:none;">Telegram Channel</a> • 
-        <a href="https://t.me/BonusHubDeels" target="_blank" style="color:#00ff9d;font-weight:bold;font-size:21px;text-decoration:none;">@BonusHubDeels (Direct)</a>
-    </div>
-    
-    <p style="margin-top:40px;font-size:13px;color:#888;">
-        © 2025 BonusHub.bet — Licensed & Regulated · Munich, Germany<br>
-        <small>Gamble Responsibly • 18+</small>
-    </p>
-</div>  
-
-
-
