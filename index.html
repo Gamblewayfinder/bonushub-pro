@@ -5,30 +5,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BonusHub.bet | Casino Reviews, Bonuses & Guides</title>
-  <meta name="description" content="BonusHub.bet publishes structured casino reviews, bonus breakdowns and GEO-focused casino guides for Tier-1 markets." />
+  <meta name="description" content="Structured casino reviews, GEO-focused casino guides and bonus breakdowns for players looking for transparent online casino information." />
   <link rel="icon" href="favicon.png" type="image/png">
   <style>
+    :root {
+      --bg: #0b1420;
+      --bg-soft: #101d2c;
+      --panel: #132235;
+      --panel-2: #18293d;
+      --text: #e8f1f8;
+      --muted: #b7c8d6;
+      --gold: #f6c343;
+      --gold-dark: #cda12d;
+      --line: rgba(255,255,255,0.08);
+      --shadow: 0 12px 28px rgba(0,0,0,0.28);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f1c27;
-      color: #e8f1f8;
-      line-height: 1.6;
+      background:
+        radial-gradient(circle at top right, rgba(246,195,67,0.10), transparent 22%),
+        linear-gradient(180deg, #08111b 0%, #0b1420 100%);
+      color: var(--text);
+      line-height: 1.65;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 40px 20px 70px;
     }
 
     h1, h2, h3 {
-      color: #f6c343;
+      color: var(--gold);
       margin-top: 0;
     }
 
+    h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
     a {
-      color: #f6c343;
+      color: var(--gold);
       text-decoration: none;
     }
 
@@ -37,112 +78,217 @@
     }
 
     .hero {
-      padding: 30px 0 10px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 50px;
     }
 
-    .hero p {
-      max-width: 760px;
+    .hero-main,
+    .hero-side {
+      background: linear-gradient(180deg, rgba(20,35,53,0.95), rgba(13,25,39,0.96));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main p {
       font-size: 18px;
-      color: #d8e4ee;
+      max-width: 720px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      color: #d7e4ee;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #0b1420;
+    }
+
+    .btn-primary:hover {
+      background: #ffd65d;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.03);
+      border-color: var(--line);
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.07);
+      text-decoration: none;
+    }
+
+    .hero-side h3 {
+      margin-bottom: 16px;
+    }
+
+    .hero-side ul {
+      padding-left: 20px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .hero-side li {
+      margin-bottom: 10px;
     }
 
     .section {
-      margin-top: 50px;
+      margin-top: 56px;
     }
 
-    .guide-grid,
-    .casino-grid {
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section-header p {
+      max-width: 700px;
+      margin: 0;
+    }
+
+    .casino-grid,
+    .guide-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 22px;
-      margin-top: 20px;
     }
 
     .card {
-      background: #162634;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(20,36,54,0.96), rgba(17,30,46,0.96));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       padding: 24px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
     }
 
     .card p {
-      color: #d7e2eb;
-      font-size: 15px;
-      margin-bottom: 18px;
+      flex-grow: 1;
     }
 
     .badge {
       display: inline-block;
-      background: #1f3547;
-      color: #dce8f2;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+      color: #dbe8f1;
       padding: 6px 10px;
-      border-radius: 20px;
+      border-radius: 999px;
       font-size: 12px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      width: fit-content;
     }
 
     .button-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 10px;
+      margin-top: 16px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.2s ease;
+    .info-panel {
+      background: linear-gradient(180deg, rgba(19,33,48,0.96), rgba(13,24,36,0.96));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow);
     }
 
-    .btn-primary {
-      background: #f6c343;
-      color: #0f1c27;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-      text-decoration: none;
-    }
-
-    .btn-secondary {
-      background: #203647;
-      color: #ffffff;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .btn-secondary:hover {
-      background: #29465c;
-      text-decoration: none;
-    }
-
-    .note-box {
-      background: #13212d;
-      border-left: 4px solid #f6c343;
-      padding: 18px 20px;
-      border-radius: 8px;
-      margin-top: 25px;
-    }
-
-    ul {
+    .info-panel ul {
       padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .info-panel li {
+      margin-bottom: 8px;
+      color: var(--muted);
     }
 
     hr {
-      margin: 50px 0;
+      margin: 58px 0 0;
       border: 0;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid var(--line);
     }
 
     footer {
-      margin-top: 60px;
-      padding: 30px 20px;
+      margin-top: 42px;
+      padding-top: 8px;
       text-align: center;
       font-size: 14px;
-      opacity: 0.7;
+      color: #9fb3c3;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 16px 50px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .card,
+      .info-panel {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
@@ -151,21 +297,48 @@
   <div class="container">
 
     <section class="hero">
-      <h1>BonusHub.bet</h1>
-      <p>
-        Structured casino reviews, bonus breakdowns and practical guides for players looking for
-        clear information instead of hype. We focus on GEO-specific casino content, user-friendly
-        reviews and transparent offer pages.
-      </p>
+      <div class="hero-main">
+        <h1>BonusHub.bet</h1>
+        <p>
+          Structured casino reviews, bonus breakdowns and practical GEO-focused guides for players
+          who want clear information instead of hype. We review offers, payment logic, player fit
+          and usability in a more practical way.
+        </p>
 
-      <div class="note-box">
-        We are currently expanding our review coverage and adding new casino brands and guides.
-        Start with our featured casino offers below or browse one of our GEO-focused pages.
+        <div class="hero-badges">
+          <span class="pill">Casino Reviews</span>
+          <span class="pill">Tier-1 GEO Focus</span>
+          <span class="pill">Bonus Breakdowns</span>
+          <span class="pill">Guide Pages</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#featured-offers">View Casino Offers</a>
+          <a class="btn btn-secondary" href="#casino-guides">Open Guides</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <h3>What we focus on</h3>
+        <ul>
+          <li>Structured casino review pages instead of thin listing pages</li>
+          <li>Clear GEO targeting and practical market guides</li>
+          <li>Bonus, payments, mobile usability and overall player fit</li>
+          <li>Gradual expansion of new casino brands and test offers</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Featured Casino Offers</h2>
+    <section class="section" id="featured-offers">
+      <div class="section-header">
+        <div>
+          <h2>Featured Casino Offers</h2>
+          <p>
+            Current featured brands on BonusHub.bet. We keep the structure clean and focus on a
+            smaller portfolio instead of overcrowding the page with too many offers.
+          </p>
+        </div>
+      </div>
 
       <div class="casino-grid">
 
@@ -173,12 +346,12 @@
           <span class="badge">Top Offer</span>
           <h3>Corgibet Casino</h3>
           <p>
-            Casino-focused offer currently relevant for Germany and Austria traffic. Good option
-            for players looking for a modern casino-style experience.
+            Casino-focused offer relevant for Germany and Austria traffic. A clean main-offer
+            candidate for review-based pages and GEO-targeted listings.
           </p>
           <div class="button-row">
             <a class="btn btn-secondary" href="corgibet.html">Read Review</a>
-            <a class="btn btn-primary" href="https://track.coolaffs.com/visit/?bta=37155&nci=5377&Afp10=Seo" target="_blank" rel="nofollow sponsored">Play Now</a>
+            <a class="btn btn-primary" href="PASTE_CORGIBET_AFFILIATE_LINK_HERE" target="_blank" rel="nofollow sponsored">Play Now</a>
           </div>
         </div>
 
@@ -186,12 +359,12 @@
           <span class="badge">Top Offer</span>
           <h3>MagneticSlots</h3>
           <p>
-            Slot-focused casino brand with a clean offer structure and strong fit for review-based
-            traffic. A solid option for casino players looking for simple slot access.
+            Slot-focused casino brand with a straightforward structure and strong relevance for
+            review-led traffic. A good supporting offer beside Corgibet.
           </p>
           <div class="button-row">
             <a class="btn btn-secondary" href="magneticslots.html">Read Review</a>
-            <a class="btn btn-primary" href="https://track.coolaffs.com/visit/?bta=37155&nci=5416&Afp10=Seo" target="_blank" rel="nofollow sponsored">Play Now</a>
+            <a class="btn btn-primary" href="PASTE_MAGNETICSLOTS_AFFILIATE_LINK_HERE" target="_blank" rel="nofollow sponsored">Play Now</a>
           </div>
         </div>
 
@@ -199,8 +372,8 @@
           <span class="badge">New Casino</span>
           <h3>Slotuna Casino</h3>
           <p>
-            New brand currently available for Germany-focused testing. Good candidate for slot-led
-            traffic and low-entry deposit onboarding.
+            New Germany-focused casino offer currently suitable for SEO-based testing. Best used as
+            a controlled test brand with structured review support.
           </p>
           <div class="button-row">
             <a class="btn btn-secondary" href="slotuna-casino-review.html">Read Review</a>
@@ -212,8 +385,8 @@
           <span class="badge">New Casino</span>
           <h3>Sportuna Casino</h3>
           <p>
-            Sports and casino oriented offer for Germany traffic. Suitable as a secondary test
-            brand once the main slot-focused offers are in place.
+            Sports and casino-oriented offer for Germany-facing traffic. Suitable as a secondary
+            brand once your primary test brand is already in place.
           </p>
           <div class="button-row">
             <a class="btn btn-secondary" href="sportuna-casino-review.html">Read Review</a>
@@ -225,8 +398,8 @@
           <span class="badge">New Casino</span>
           <h3>Lanista Casino</h3>
           <p>
-            New Germany-facing casino offer currently available for SEO tests. Best used as an
-            additional brand after primary offer performance is reviewed.
+            Additional Germany-facing casino offer available for SEO tests. Best treated as a later
+            expansion brand after reviewing first-brand conversion quality.
           </p>
           <div class="button-row">
             <a class="btn btn-secondary" href="lanista-casino-review.html">Read Review</a>
@@ -237,11 +410,18 @@
       </div>
     </section>
 
-    <section class="section">
-      <h2>Casino Guides</h2>
+    <section class="section" id="casino-guides">
+      <div class="section-header">
+        <div>
+          <h2>Casino Guides</h2>
+          <p>
+            GEO-focused guide pages that support organic traffic growth and give the site stronger
+            structure than a homepage-only affiliate setup.
+          </p>
+        </div>
+      </div>
 
       <div class="guide-grid">
-
         <div class="card">
           <span class="badge">GEO Guide</span>
           <h3>Finland Casino Guide</h3>
@@ -253,37 +433,40 @@
             <a class="btn btn-primary" href="finland-casinos.html">Open Guide</a>
           </div>
         </div>
-
       </div>
     </section>
 
     <section class="section">
-      <h2>How We Review Casinos</h2>
-      <p>
-        We focus on structured review criteria instead of hype. Our casino review approach includes:
-      </p>
+      <div class="info-panel">
+        <h2>How We Review Casinos</h2>
+        <p>
+          We focus on structured review criteria instead of hype. Our review process usually
+          includes the following:
+        </p>
+        <ul>
+          <li>Bonus clarity and realistic promotion structure</li>
+          <li>Payment method overview</li>
+          <li>Mobile usability and user experience</li>
+          <li>GEO suitability and general player fit</li>
+          <li>Responsible gambling visibility</li>
+        </ul>
+      </div>
+    </section>
 
-      <ul>
-        <li>✔ Bonus clarity and realistic promotion structure</li>
-        <li>✔ Payment method overview</li>
-        <li>✔ Mobile usability</li>
-        <li>✔ GEO suitability and general player fit</li>
-        <li>✔ Responsible gambling visibility</li>
-      </ul>
+    <section class="section">
+      <div class="info-panel">
+        <h2>Responsible Gambling</h2>
+        <p>
+          Online gambling should be used for entertainment purposes only. Set limits, play
+          responsibly and only use licensed and transparent operators whenever possible. 18+ only.
+        </p>
+      </div>
     </section>
 
     <hr>
 
-    <section class="section">
-      <h2>Responsible Gambling</h2>
-      <p>
-        Online gambling should be used for entertainment purposes only. Set limits, play
-        responsibly and only use licensed and transparent operators whenever possible. 18+ only.
-      </p>
-    </section>
-
     <footer>
-      © 2026 BonusHub.bet – Casino Reviews, Bonus Guides & GEO Pages – 18+ Play Responsibly
+      © 2026 BonusHub.bet — Casino Reviews, Bonus Guides & GEO Pages — 18+ Play Responsibly
     </footer>
 
   </div>
