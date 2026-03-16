@@ -1,485 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Plausible Analytics -->
   <script defer data-domain="bonushub.bet" src="https://plausible.io/js/script.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BonusHub.bet - Premium Casino Bonuses & Exclusive Deals</title>
-  <meta name="description" content="Discover premium casino bonus deals, exclusive offers, and trusted gaming sites. Hand-picked partners, expert reviews, and mobile-optimized experience." />
+  <title>BonusHub.bet | Casino Reviews, Bonuses & Guides</title>
+  <meta name="description" content="BonusHub.bet publishes structured casino reviews, bonus breakdowns and GEO-focused casino guides for Tier-1 markets." />
   <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
-    :root{
-      /* Background */
-      --bg-1:#0b0f17;
-      --bg-2:#111827;
-      --bg-3:#182033;
-
-      /* Cards / panels */
-      --card:#131a29;
-      --card-2:#1b2336;
-
-      /* Accents */
-      --gold:#f5d061;
-      --gold-2:#ffd66b;
-      --teal:#47e7d5;
-      --pink:#ff5ba6;
-      --lime:#7efc6b;
-
-      /* Text */
-      --white:#ffff;
-      --muted:#a9b4c8;
-
-      /* Effects */
-      --shadow:rgba(0,0,0,0.45);
-      --gold-glow:rgba(245,208,97,0.28);
-      --neon-glow:rgba(71,231,213,0.28);
-      --pink-glow:rgba(255,91,166,0.26);
-      --blur:12px;
-
-      --radius:16px;
-      --radius-sm:12px;
-      --radius-lg:22px;
-      --speed:.26s;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f1c27;
+      color: #e8f1f8;
+      line-height: 1.6;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 15% -10%, #1a2340 0%, transparent 60%),
-                  radial-gradient(1000px 700px at 100% 0%, #201a3a 0%, transparent 55%),
-                  linear-gradient(135deg, var(--bg-2) 0%, var(--bg-1) 100%);
-      color:var(--white);
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
-
-    /* Header / Hero */
-    .hero{
-      position:relative;
-      padding:80px 0 40px;
-      backdrop-filter:saturate(1.2);
-    }
-    .hero-inner{
-      display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px
-    }
-    .brand{
-      display:flex;align-items:center;gap:12px;
-      padding:8px 14px;border-radius:999px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.08);
-      box-shadow:0 8px 24px rgba(0,0,0,0.25) inset, 0 8px 22px var(--neon-glow);
-      backdrop-filter:blur(var(--blur));
-      font-weight:700;letter-spacing:.3px
-    }
-    .brand .gem{font-size:20px}
-    .brand .name{color:var(--gold)}
-    .hero h1{
-      font-size: clamp(28px, 4vw, 42px);
-      font-weight:800;
-      line-height:1.15;
-      text-shadow: 0 10px 30px var(--shadow);
-      background: linear-gradient(180deg, #fff 0%, #e9eef8 55%, #cbd6ea 100%);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-    }
-    .hero p{
-      max-width:760px;color:var(--muted);font-size: clamp(14px, 2.3vw, 18px)
-    }
-    .stats{
-      margin-top:10px;display:flex;flex-wrap:wrap;gap:28px;justify-content:center
-    }
-    .stat{
-      min-width:170px;background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius);
-      padding:16px 18px;text-align:left;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
-      backdrop-filter: blur(14px);
-    }
-    .stat-number{display:block;font-weight:800;color:var(--gold);font-size:22px}
-    .stat-label{font-size:12px;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
-
-    /* Trust strip */
-    .trust-strip{
-      margin:22px 0 0;padding:14px 18px;text-align:center;
-      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 6px 22px var(--neon-glow);
-      color:var(--muted)
-    }
-    .trust-strip strong{color:#eaf7ff}
-
-    /* Featured */
-    .section{padding:50px 0 10px;}
-    .section-title{
-      font-size: clamp(22px,3.4vw,32px);
-      margin-bottom:18px;
-      color:var(--gold);
-      text-align:center;
-      text-shadow: 0 10px 32px var(--gold-glow);
-    }
-    .subtitle{text-align:center;color:var(--muted);margin-bottom:26px}
-    .grid{
-      display:grid;gap:24px;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    .card{
-      position:relative;overflow:hidden;
-      background: linear-gradient(135deg, var(--card) 0%, var(--card-2) 100%);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-lg);
-      padding:22px;
-      box-shadow: 0 14px 38px rgba(0,0,0,0.45);
-      transition: transform var(--speed) ease, box-shadow var(--speed) ease, border-color var(--speed) ease, filter var(--speed) ease;
-    }
-    .card:hover{
-      transform: translateY(-6px);
-      border-color: var(--gold);
-      box-shadow: 0 18px 48px var(--gold-glow), 0 10px 26px rgba(0,0,0,0.5);
-      filter: saturate(1.08);
-    }
-    .card::before{
-      content:"";position:absolute;inset:0;pointer-events:none;
-      background: linear-gradient(120deg, rgba(255,255,255,0.05), transparent 30%, transparent 70%, rgba(255,255,255,0.06));
-      opacity:.6;mix-blend-mode:overlay;
-    }
-    .card-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
-    .icon{font-size:24px}
-    .name{font-weight:800;color:var(--gold);font-size:18px}
-    .badge{
-      margin-left:auto;font-size:11px;font-weight:800;text-transform:uppercase;
-      padding:5px 10px;border-radius:999px;letter-spacing:.6px;
-      background: linear-gradient(45deg, var(--pink), #ff3d85);
-      color:#fff;box-shadow: 0 10px 26px var(--pink-glow);
-      animation: pulse 2.2s infinite;
-    }
-    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-    .bonus{font-size:20px;font-weight:800;color:var(--gold);margin:10px 0 12px}
-    .features{list-style:none;color:var(--muted);display:grid;gap:6px;margin:8px 0 16px}
-    .features li{position:relative;padding-left:20px}
-    .features li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:900}
-    .cta{
-      width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:13px 16px;border:none;border-radius:12px;cursor:pointer;
-      background: linear-gradient(45deg, var(--lime), #a4ff7f);
-      color:#0e1a24;font-weight:900;letter-spacing:.6px;text-transform:uppercase;
-      transition: transform var(--speed), box-shadow var(--speed);
-      box-shadow: 0 12px 34px rgba(126,252,107,0.32);
-      text-decoration:none;
-      user-select:none;
-    }
-    .cta:hover{transform: translateY(-2px);box-shadow: 0 16px 42px rgba(126,252,107,0.42)}
-    .cta:active{transform: translateY(0)}
-
-    /* Categories */
-    .categories{
-      margin:36px 0 8px;
-      display:flex;gap:10px;flex-wrap:wrap;justify-content:center
-    }
-    .chip{
-      padding:8px 12px;border-radius:999px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.08);
-      color:var(--muted);
-      transition:all var(--speed) ease;
-      cursor:pointer;
-      user-select:none;
-    }
-    .chip:hover{color:#eafffb;border-color:var(--teal);box-shadow: 0 6px 18px var(--neon-glow)}
-    .chip.active{color:#0e1a24;background:linear-gradient(45deg, var(--gold), var(--gold-2));border-color:transparent;font-weight:700;box-shadow: 0 8px 22px var(--gold-glow)}
-
-    /* Why Choose */
-    .why-grid{display:grid;gap:18px;grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));margin-top:10px}
-    .why-card{
-      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius);
-      padding:18px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    }
-    .why-title{display:flex;align-items:center;gap:10px;font-weight:800;margin-bottom:6px;color:#f1f5ff}
-    .why-text{color:var(--muted)}
-
-    /* Newsletter */
-    .newsletter{
-      margin:36px auto 8px;max-width:720px;text-align:center;
-      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-lg);padding:22px;backdrop-filter: blur(8px);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.3);
-      transition: border-color var(--speed), box-shadow var(--speed);
-    }
-    .newsletter:hover{border-color:var(--gold);box-shadow: 0 14px 36px var(--gold-glow)}
-    .form{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-    .input{
-      flex:1;min-width:220px;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.14);
-      background: rgba(0,0,0,0.28);color:#fff;outline:none
-    }
-    .input::placeholder{color:#9aabc4}
-    .btn{
-      padding:12px 16px;border-radius:12px;border:none;cursor:pointer;font-weight:800;
-      background: linear-gradient(45deg, var(--gold), var(--gold-2));color:#0e1a24;
-      box-shadow: 0 12px 30px var(--gold-glow);
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    /* Contact */
-    .contact{
-      margin:40px 0 8px;display:grid;gap:18px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    h1, h2, h3 {
+      color: #f6c343;
+      margin-top: 0;
     }
-    .contact-card{
-      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius);
-      padding:18px;
-      transition: all var(--speed) ease;
-    }
-    .contact-card:hover{
-      border-color: var(--teal);
-      box-shadow: 0 8px 24px var(--neon-glow);
-      transform: translateY(-2px);
-    }
-    .contact-card .label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
-    .contact-card .value{font-weight:800;margin-top:6px;display:flex;align-items:center;gap:10px;font-size:16px}
-    .contact-card .value i{color:var(--teal);font-size:20px}
-    .contact-card .value a{color:var(--white);text-decoration:none;transition:color var(--speed)}
-    .contact-card .value a:hover{color:var(--gold)}
 
-    /* Social Links in Contact */
-    .social-links{display:flex;gap:12px;margin-top:8px;}
-    .social-link{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 14px;border-radius:999px;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.12);
-      color:var(--white);text-decoration:none;
-      transition:all var(--speed) ease;
-      font-size:14px;
+    a {
+      color: #f6c343;
+      text-decoration: none;
     }
-    .social-link:hover{
-      background:rgba(255,255,255,0.15);
-      border-color:var(--teal);
-      transform:translateY(-2px);
-      box-shadow: 0 6px 18px var(--neon-glow);
-    }
-    .social-link i{font-size:16px}
 
-    /* Footer */
-    footer{
-      margin-top:36px;border-top:1px solid rgba(255,255,255,0.08);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    a:hover {
+      text-decoration: underline;
     }
-    .footer-inner{padding:20px 0;text-align:center;color:#98a6be;font-size:14px}
-    .footer-inner strong{color:#eaf2ff}
 
-    /* Responsive tweaks */
-    @media (max-width: 768px){
-      .stat{min-width:140px}
-      .social-links{flex-direction:column}
+    .hero {
+      padding: 30px 0 10px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 18px;
+      color: #d8e4ee;
+    }
+
+    .section {
+      margin-top: 50px;
+    }
+
+    .guide-grid,
+    .casino-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #162634;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    }
+
+    .card p {
+      color: #d7e2eb;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1f3547;
+      color: #dce8f2;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #f6c343;
+      color: #0f1c27;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: #203647;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .btn-secondary:hover {
+      background: #29465c;
+      text-decoration: none;
+    }
+
+    .note-box {
+      background: #13212d;
+      border-left: 4px solid #f6c343;
+      padding: 18px 20px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    hr {
+      margin: 50px 0;
+      border: 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.7;
     }
   </style>
 </head>
-
 <body>
+
   <div class="container">
 
-    <!-- HERO -->
     <section class="hero">
-      <div class="hero-inner">
-        <div class="brand">
-          <span class="gem">💎</span>
-          <span class="name">BonusHub.bet</span>
-        </div>
-        <h1>Discover Premium Bonus Deals</h1>
-        <p>Find the best online bonuses, exclusive deals, and trusted gaming sites. Start with structured reviews and clear terms.</p>
+      <h1>BonusHub.bet</h1>
+      <p>
+        Structured casino reviews, bonus breakdowns and practical guides for players looking for
+        clear information instead of hype. We focus on GEO-specific casino content, user-friendly
+        reviews and transparent offer pages.
+      </p>
 
-        <div class="stats">
-          <div class="stat">
-            <span class="stat-number">Reviews</span>
-            <span class="stat-label">Structured Funnel</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">EU</span>
-            <span class="stat-label">Multi-GEO</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">Mobile</span>
-            <span class="stat-label">Optimized</span>
-          </div>
-        </div>
-
-        <div class="trust-strip">18+ • Gamble responsibly • Always read bonus terms before claiming</div>
+      <div class="note-box">
+        We are currently expanding our review coverage and adding new casino brands and guides.
+        Start with our featured casino offers below or browse one of our GEO-focused pages.
       </div>
     </section>
 
-    <!-- FEATURED CASINOS -->
     <section class="section">
-      <h2 class="section-title">🔥 Featured Casinos</h2>
-      <p class="subtitle">Our current focus: two partner brands. Read the full review first, then claim the offer.</p>
+      <h2>Featured Casino Offers</h2>
 
-      <div class="grid">
+      <div class="casino-grid">
 
-        <!-- Corgibet -->
-        <article class="card">
-          <div class="card-head">
-            <div class="icon">🐶</div>
-            <div class="name">Corgibet</div>
-            <div class="badge">DE • AT • NO</div>
+        <div class="card">
+          <span class="badge">Top Offer</span>
+          <h3>Corgibet Casino</h3>
+          <p>
+            Casino-focused offer currently relevant for Germany and Austria traffic. Good option
+            for players looking for a modern casino-style experience.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-secondary" href="corgibet.html">Read Review</a>
+            <a class="btn btn-primary" href="https://track.coolaffs.com/visit/?bta=37155&nci=5377&Afp10=Seo" target="_blank" rel="nofollow sponsored">Play Now</a>
           </div>
-          <div class="bonus">Read the review → then claim the offer</div>
-          <ul class="features">
-            <li>Bonus & key terms</li>
-            <li>Payments & withdrawals</li>
-            <li>Quick “who it fits” verdict</li>
-          </ul>
-          <a class="cta" href="corgibet.html">Read Review</a>
-        </article>
+        </div>
 
-        <!-- MagneticSlots -->
-        <article class="card">
-          <div class="card-head">
-            <div class="icon">🧲</div>
-            <div class="name">MagneticSlots</div>
-            <div class="badge">FI • AT</div>
+        <div class="card">
+          <span class="badge">Top Offer</span>
+          <h3>MagneticSlots</h3>
+          <p>
+            Slot-focused casino brand with a clean offer structure and strong fit for review-based
+            traffic. A solid option for casino players looking for simple slot access.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-secondary" href="magneticslots.html">Read Review</a>
+            <a class="btn btn-primary" href="https://track.coolaffs.com/visit/?bta=37155&nci=5416&Afp10=Seo" target="_blank" rel="nofollow sponsored">Play Now</a>
           </div>
-          <div class="bonus">Read the review → then claim the offer</div>
-          <ul class="features">
-            <li>Bonus & key terms</li>
-            <li>Payments & withdrawals</li>
-            <li>Quick “who it fits” verdict</li>
-          </ul>
-          <a class="cta" href="magneticslots.html">Read Review</a>
-        </article>
+        </div>
+
+        <div class="card">
+          <span class="badge">New Casino</span>
+          <h3>Slotuna Casino</h3>
+          <p>
+            New brand currently available for Germany-focused testing. Good candidate for slot-led
+            traffic and low-entry deposit onboarding.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-secondary" href="slotuna-casino-review.html">Read Review</a>
+            <a class="btn btn-primary" href="https://beardorbit.com/api/v3/offer/4810?aff_sub3=sltseode&affiliate_id=2526&url_id=7929" target="_blank" rel="nofollow sponsored">Play Now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge">New Casino</span>
+          <h3>Sportuna Casino</h3>
+          <p>
+            Sports and casino oriented offer for Germany traffic. Suitable as a secondary test
+            brand once the main slot-focused offers are in place.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-secondary" href="sportuna-casino-review.html">Read Review</a>
+            <a class="btn btn-primary" href="https://beardorbit.com/api/v3/offer/4811?aff_sub3=sprseode&affiliate_id=2526&url_id=7930" target="_blank" rel="nofollow sponsored">Play Now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge">New Casino</span>
+          <h3>Lanista Casino</h3>
+          <p>
+            New Germany-facing casino offer currently available for SEO tests. Best used as an
+            additional brand after primary offer performance is reviewed.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-secondary" href="lanista-casino-review.html">Read Review</a>
+            <a class="btn btn-primary" href="https://beardorbit.com/api/v3/offer/4812?aff_sub3=lstseode&affiliate_id=2526&url_id=7931" target="_blank" rel="nofollow sponsored">Play Now</a>
+          </div>
+        </div>
 
       </div>
+    </section>
 
-      <!-- Finland SEO landing link -->
-      <p style="margin-top:30px; text-align:center;">
-        🇫🇮 <a href="finland-casinos.html" style="font-weight:900; color:var(--gold); text-decoration:none;">
-          Best Online Casinos in Finland →
-        </a>
+    <section class="section">
+      <h2>Casino Guides</h2>
+
+      <div class="guide-grid">
+
+        <div class="card">
+          <span class="badge">GEO Guide</span>
+          <h3>Finland Casino Guide</h3>
+          <p>
+            A Finland-focused guide covering casino selection, payment methods, bonus terms and
+            practical review criteria for Finnish players.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="finland-casinos.html">Open Guide</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How We Review Casinos</h2>
+      <p>
+        We focus on structured review criteria instead of hype. Our casino review approach includes:
+      </p>
+
+      <ul>
+        <li>✔ Bonus clarity and realistic promotion structure</li>
+        <li>✔ Payment method overview</li>
+        <li>✔ Mobile usability</li>
+        <li>✔ GEO suitability and general player fit</li>
+        <li>✔ Responsible gambling visibility</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>Responsible Gambling</h2>
+      <p>
+        Online gambling should be used for entertainment purposes only. Set limits, play
+        responsibly and only use licensed and transparent operators whenever possible. 18+ only.
       </p>
     </section>
 
-    <!-- Categories -->
-    <section class="categories" aria-label="Browse by Category">
-      <div class="chip active">All</div>
-      <div class="chip">Welcome</div>
-      <div class="chip">No Deposit</div>
-      <div class="chip">High Roller</div>
-      <div class="chip">Cashback</div>
-      <div class="chip">Crypto</div>
-      <div class="chip">Live Casino</div>
-      <div class="chip">Mobile</div>
-    </section>
-
-    <!-- Why Choose -->
-    <section class="section">
-      <h2 class="section-title">Why Choose BonusHub.bet</h2>
-      <p class="subtitle">Trust, transparency, and structured reviews — designed for long-term quality traffic.</p>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-title">🔍 Clear Reviews</div>
-          <div class="why-text">We focus on readable terms, payments and real-world usability.</div>
-        </div>
-        <div class="why-card">
-          <div class="why-title">💎 Transparent Offers</div>
-          <div class="why-text">No hidden angles — visitors can understand what they claim.</div>
-        </div>
-        <div class="why-card">
-          <div class="why-title">🏆 Mobile First</div>
-          <div class="why-text">Most traffic is mobile. We optimize the funnel accordingly.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter" id="newsletter">
-      <h3>Never Miss a Bonus!</h3>
-      <p class="subtitle">Get the latest updates delivered straight to your inbox</p>
-      <form class="form" id="subscribe-form" novalidate>
-        <input class="input" id="email" name="email" type="email" placeholder="your@email.com" required />
-        <button class="btn" type="submit">Subscribe</button>
-      </form>
-      <p class="subtitle" style="margin-top:8px">No spam, unsubscribe anytime. We respect your privacy.</p>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-      <div class="contact-card">
-        <div class="label">Email Us</div>
-        <div class="value">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:affiliate@bonushub.bet">affiliate@bonushub.bet</a>
-        </div>
-      </div>
-
-      <div class="contact-card">
-        <div class="label">Contact Us</div>
-        <div class="social-links">
-          <a href="https://t.me/Bonushubbet" target="_blank" class="social-link" rel="noopener">
-            <i class="fab fa-telegram"></i>
-            <span>@Bonushubbet</span>
-          </a>
-          <a href="https://x.com/bonus_hub" target="_blank" class="social-link" rel="noopener">
-            <i class="fab fa-x-twitter"></i>
-            <span>@bonus_hub</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-card">
-        <div class="label">Latest News</div>
-        <div class="value">
-          <i class="fas fa-rss"></i>
-          <span style="color:var(--muted)">Coming Soon</span>
-        </div>
-        <p style="font-size:12px;color:var(--muted);margin-top:8px">
-          Blog & RSS feed in development
-        </p>
-      </div>
-    </section>
+    <footer>
+      © 2026 BonusHub.bet – Casino Reviews, Bonus Guides & GEO Pages – 18+ Play Responsibly
+    </footer>
 
   </div>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>&copy; <span id="year"></span> <strong>BonusHub.bet</strong>. Gamble Responsibly. 18+</div>
-      <div>🌟 Your Gateway to Premium Casino Bonuses 🌟</div>
-    </div>
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Smooth scroll
-    document.documentElement.style.scrollBehavior = 'smooth';
-
-    // Categories active state
-    const chips = document.querySelectorAll('.chip');
-    chips.forEach(ch => ch.addEventListener('click', ()=>{
-      chips.forEach(c=>c.classList.remove('active'));
-      ch.classList.add('active');
-    }));
-
-    // Newsletter validation (demo)
-    const form = document.getElementById('subscribe-form');
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const email = document.getElementById('email').value.trim();
-      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      if(!valid){ alert('Please enter a valid email.'); return; }
-      alert('Thanks for subscribing! (demo)');
-      form.reset();
-    });
-  </script>
 </body>
 </html>
