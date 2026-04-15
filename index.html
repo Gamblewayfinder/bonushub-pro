@@ -1,572 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script defer data-domain="bonushub.bet" src="https://plausible.io/js/script.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BonusHub.bet | Premium Casino Reviews & Guides</title>
-  <meta name="description" content="Premium casino reviews, GEO-focused guides and structured casino comparisons for players looking for clear and practical information." />
-  <link rel="icon" href="favicon.png" type="image/png">
 
-  <style>
-    :root {
-      --bg1: #040913;
-      --bg2: #081220;
-      --panel: rgba(14, 28, 45, 0.92);
-      --panel-soft: rgba(18, 35, 56, 0.92);
-      --line: rgba(255,255,255,0.08);
-      --text: #edf4fb;
-      --muted: #b9c7d7;
-      --gold: #f4c84a;
-      --gold-strong: #ffd65c;
-      --blue-glow: rgba(46, 174, 255, 0.18);
-      --green: #80f06a;
-      --pink: #ff4fa3;
-      --radius: 22px;
-      --shadow: 0 12px 30px rgba(0,0,0,0.35);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    * {
-      box-sizing: border-box;
-    }
+<title>BonusHub.bet | Premium Casino Reviews</title>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<meta name="description" content="Premium casino reviews, GEO-focused guides and structured casino comparisons for players looking for clear information about online casinos.">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top center, rgba(79, 117, 255, 0.18), transparent 18%),
-        radial-gradient(circle at top right, rgba(0, 217, 255, 0.12), transparent 18%),
-        radial-gradient(circle at left center, rgba(255, 86, 197, 0.08), transparent 20%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
-      line-height: 1.65;
-    }
+<link rel="icon" href="favicon.png">
 
-    .container {
-      max-width: 1180px;
-      margin: auto;
-      padding: 34px 20px 70px;
-    }
+<style>
 
-    h1, h2, h3 {
-      margin-top: 0;
-    }
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0d17;
+color:white;
+margin:0;
+}
 
-    h1 {
-      font-size: 64px;
-      line-height: 1.05;
-      font-weight: 800;
-      letter-spacing: -1px;
-      margin-bottom: 18px;
-      text-align: center;
-      color: #eef3fa;
-      text-shadow: 0 0 18px rgba(255,255,255,0.08);
-    }
+.container{
+max-width:1200px;
+margin:auto;
+padding:50px 20px;
+}
 
-    h2 {
-      font-size: 42px;
-      line-height: 1.1;
-      text-align: center;
-      color: var(--gold);
-      margin-bottom: 14px;
-      text-shadow: 0 0 20px rgba(244, 200, 74, 0.16);
-    }
+h1{
+font-size:42px;
+margin-bottom:10px;
+}
 
-    h3 {
-      font-size: 22px;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
+.subtitle{
+color:#a9b2c7;
+margin-bottom:40px;
+}
 
-    p {
-      color: var(--muted);
-      margin: 0 0 16px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
 
-    a {
-      color: var(--gold);
-      text-decoration: none;
-    }
+.card{
+background:#13182b;
+padding:25px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,0.05);
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.casino{
+font-size:26px;
+font-weight:700;
+margin-bottom:10px;
+}
 
-    .brand-pill {
-      width: fit-content;
-      margin: 0 auto 26px;
-      padding: 14px 26px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, rgba(17, 35, 56, 0.95), rgba(10, 24, 39, 0.95));
-      border: 1px solid rgba(56, 193, 255, 0.18);
-      box-shadow:
-        0 0 22px rgba(65, 199, 255, 0.16),
-        inset 0 0 0 1px rgba(255,255,255,0.03);
-      color: #f3cf63;
-      font-size: 18px;
-      font-weight: 700;
-    }
+.geo{
+color:#86c5ff;
+font-size:14px;
+margin-bottom:15px;
+}
 
-    .hero {
-      max-width: 960px;
-      margin: 0 auto 48px;
-      text-align: center;
-    }
+.bonus{
+background:#1a2139;
+padding:14px;
+border-radius:10px;
+margin-bottom:15px;
+}
 
-    .hero-sub {
-      font-size: 30px;
-      color: #cfd8e4;
-      margin-bottom: 14px;
-      font-weight: 700;
-    }
+.btn{
+display:block;
+text-align:center;
+background:#f4c430;
+color:black;
+padding:14px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+}
 
-    .hero-lead {
-      font-size: 20px;
-      color: #b8c6d5;
-      max-width: 940px;
-      margin: 0 auto 30px;
-    }
+.btn:hover{
+background:#ffd84d;
+}
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 24px;
-    }
+footer{
+margin-top:60px;
+text-align:center;
+color:#6d7488;
+font-size:14px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 12px;
-      font-weight: 800;
-      text-decoration: none;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
-      letter-spacing: 0.2px;
-    }
+</style>
 
-    .btn-primary {
-      background: linear-gradient(180deg, var(--gold-strong), #efc64b);
-      color: #09111b;
-      box-shadow: 0 0 24px rgba(244, 200, 74, 0.22);
-    }
-
-    .btn-primary:hover {
-      text-decoration: none;
-      filter: brightness(1.04);
-    }
-
-    .btn-secondary {
-      background: linear-gradient(180deg, rgba(19, 37, 59, 0.98), rgba(14, 28, 44, 0.98));
-      color: #edf4fb;
-      border-color: rgba(255,255,255,0.08);
-      box-shadow: 0 0 18px rgba(61, 175, 255, 0.10);
-    }
-
-    .btn-secondary:hover {
-      text-decoration: none;
-      filter: brightness(1.05);
-    }
-
-    .section {
-      margin-top: 72px;
-    }
-
-    .section-lead {
-      text-align: center;
-      max-width: 860px;
-      margin: 0 auto 28px;
-      font-size: 18px;
-      color: #b8c6d5;
-    }
-
-    .casino-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 22px;
-    }
-
-    .casino-card {
-      background: linear-gradient(180deg, rgba(16, 32, 51, 0.95), rgba(9, 22, 36, 0.95));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .casino-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(67, 179, 255, 0.08), transparent 25%);
-      pointer-events: none;
-    }
-
-    .casino-card p {
-      flex-grow: 1;
-      color: #d0dbe6;
-      font-size: 16px;
-    }
-
-    .badge {
-      width: fit-content;
-      display: inline-block;
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: #f2f7fc;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.04);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
-    }
-
-    .badge-top {
-      background: rgba(37, 72, 110, 0.55);
-    }
-
-    .badge-new {
-      background: rgba(27, 77, 117, 0.55);
-    }
-
-    .badge-soon {
-      background: rgba(99, 45, 96, 0.42);
-      color: #ffd7ef;
-      border-color: rgba(255, 79, 163, 0.18);
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .mini-btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 10px;
-      font-weight: 800;
-      text-decoration: none;
-      border: 1px solid transparent;
-    }
-
-    .mini-review {
-      background: linear-gradient(180deg, rgba(21, 40, 62, 0.96), rgba(16, 31, 48, 0.96));
-      border-color: rgba(255,255,255,0.08);
-      color: #ffffff;
-    }
-
-    .mini-play {
-      background: linear-gradient(180deg, #8bf16f, #79e85f);
-      color: #071119;
-      box-shadow: 0 0 22px rgba(128, 240, 106, 0.22);
-    }
-
-    .mini-soon {
-      background: linear-gradient(180deg, rgba(44, 28, 48, 0.96), rgba(34, 22, 36, 0.96));
-      color: #ffd9f0;
-      border: 1px solid rgba(255, 79, 163, 0.16);
-    }
-
-    .guide-panel {
-      background: linear-gradient(180deg, rgba(17, 33, 51, 0.96), rgba(10, 21, 34, 0.96));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .guide-panel h3 {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-      margin-top: 24px;
-    }
-
-    .info-box {
-      background: linear-gradient(180deg, rgba(17, 32, 48, 0.96), rgba(10, 22, 35, 0.96));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .info-box ul {
-      margin: 0;
-      padding-left: 20px;
-      color: #d1ddeb;
-    }
-
-    .info-box li {
-      margin-bottom: 8px;
-    }
-
-    hr {
-      margin: 70px 0 28px;
-      border: 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    footer {
-      text-align: center;
-      color: #9db2c5;
-      font-size: 14px;
-      padding-bottom: 20px;
-    }
-
-    @media (max-width: 900px) {
-      h1 {
-        font-size: 48px;
-      }
-
-      h2 {
-        font-size: 34px;
-      }
-
-      .hero-sub {
-        font-size: 24px;
-      }
-
-      .hero-lead {
-        font-size: 18px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 22px 16px 50px;
-      }
-
-      h1 {
-        font-size: 38px;
-      }
-
-      h2 {
-        font-size: 28px;
-      }
-
-      .brand-pill {
-        font-size: 16px;
-        padding: 12px 20px;
-      }
-
-      .casino-card,
-      .guide-panel,
-      .info-box {
-        padding: 20px;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <section class="hero">
-      <div class="brand-pill">💎 BonusHub.bet</div>
-      <h1>Premium Casino Reviews</h1>
-      <div class="hero-sub">Clear bonus logic, GEO focus and practical review pages.</div>
-      <p class="hero-lead">
-        BonusHub.bet is built for players who want cleaner casino information, structured reviews,
-        GEO-specific pages and a more practical way to compare brands.
-      </p>
+<h1>Top Online Casino Bonuses</h1>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#active-casinos">View Active Casinos</a>
-        <a class="btn btn-secondary" href="#casino-guides">Open Guides</a>
-      </div>
-    </section>
+<p class="subtitle">
+Hand-picked casino offers and new brands tested by our affiliate network.
+</p>
 
-    <section class="section" id="active-casinos">
-      <h2>Active Casinos</h2>
-      <p class="section-lead">
-        Current featured brands with working review pages and active links.
-      </p>
+<div class="grid">
 
-      <div class="casino-grid">
+<div class="card">
 
-        <div class="casino-card">
-          <span class="badge badge-top">Top Offer</span>
-          <h3>Corgibet Casino</h3>
-          <p>
-            Casino-focused offer relevant for Germany, Austria and Norway. A strong main review
-            brand for GEO-targeted casino pages.
-          </p>
-          <div class="button-row">
-            <a class="mini-btn mini-review" href="corgibet-casino-review.html">Read Review</a>
-            <a class="mini-btn mini-play" href="https://track.coolaffs.com/visit/?bta=37155&nci=5377&Afp10=Seo" target="_blank" rel="nofollow sponsored">Play Now</a>
-          </div>
-        </div>
+<div class="casino">Magic Win</div>
 
-        <div class="casino-card">
-          <span class="badge badge-top">Top Offer</span>
-          <h3>MagneticSlots</h3>
-          <p>
-            Slot-focused casino brand with a straightforward structure and strong fit for slot-intent
-            content and review-led traffic.
-          </p>
-          <div class="button-row">
-            <a class="mini-btn mini-review" href="magneticslots.html">Read Review</a>
-            <a class="mini-btn mini-play" href="https://track.coolaffs.com/visit/?bta=37155&nci=5416&Afp10=Seo" target="_blank" rel="nofollow sponsored">Play Now</a>
-          </div>
-        </div>
+<div class="geo">
+Available in: Italy, Netherlands
+</div>
 
-        <div class="casino-card">
-          <span class="badge badge-new">New Casino</span>
-          <h3>Slotuna Casino</h3>
-          <p>
-            New Germany-focused casino currently suitable for SEO-based testing and structured
-            comparison pages.
-          </p>
-          <div class="button-row">
-            <a class="mini-btn mini-review" href="slotuna-casino-review.html">Read Review</a>
-            <a class="mini-btn mini-play" href="https://beardorbit.com/api/v3/offer/4810?aff_sub3=sltseode&affiliate_id=2526&url_id=7929" target="_blank" rel="nofollow sponsored">Play Now</a>
-          </div>
-        </div>
+<div class="bonus">
+400% Bonus up to €2000 + 145 Free Spins<br>
+Code: SPRINGMAGIC145
+</div>
 
-        <div class="casino-card">
-          <span class="badge badge-new">New Casino</span>
-          <h3>Sportuna Casino</h3>
-          <p>
-            Sports and casino-oriented Germany-facing offer. Useful as a secondary review brand in
-            the active portfolio.
-          </p>
-          <div class="button-row">
-            <a class="mini-btn mini-review" href="sportuna-casino-review.html">Read Review</a>
-            <a class="mini-btn mini-play" href="https://beardorbit.com/api/v3/offer/4811?aff_sub3=sprseode&affiliate_id=2526&url_id=7930" target="_blank" rel="nofollow sponsored">Play Now</a>
-          </div>
-        </div>
+<a class="btn"
+href="https://tracking.multitracker.sbs/Tracking/S/69dcd5a1f53f5862a3dc6c07"
+target="_blank"
+rel="nofollow sponsored">
 
-        <div class="casino-card">
-          <span class="badge badge-new">New Casino</span>
-          <h3>Lanista Casino</h3>
-          <p>
-            Supporting Germany-facing casino brand for additional SEO testing and broader portfolio
-            coverage.
-          </p>
-          <div class="button-row">
-            <a class="mini-btn mini-review" href="lanista-casino-review.html">Read Review</a>
-            <a class="mini-btn mini-play" href="https://beardorbit.com/api/v3/offer/4812?aff_sub3=lstseode&affiliate_id=2526&url_id=7931" target="_blank" rel="nofollow sponsored">Play Now</a>
-          </div>
-        </div>
+Play Magic Win
 
-      </div>
-    </section>
+</a>
 
-    <section class="section" id="coming-soon">
-      <h2>Coming Soon</h2>
-      <p class="section-lead">
-        Additional brands planned for future review pages and portfolio expansion.
-      </p>
+</div>
 
-      <div class="casino-grid">
 
-        <div class="casino-card">
-          <span class="badge badge-soon">Coming Soon</span>
-          <h3>Coolzino Casino</h3>
-          <p>
-            Previously featured brand that may return later after technical and GEO review.
-          </p>
-          <div class="button-row">
-            <span class="mini-btn mini-soon">Review Coming Soon</span>
-          </div>
-        </div>
+<div class="card">
 
-        <div class="casino-card">
-          <span class="badge badge-soon">Coming Soon</span>
-          <h3>SpinBetter Casino</h3>
-          <p>
-            Planned as a future expansion brand once the active portfolio and review structure are
-            fully stabilized.
-          </p>
-          <div class="button-row">
-            <span class="mini-btn mini-soon">Review Coming Soon</span>
-          </div>
-        </div>
+<div class="casino">VegaZone</div>
 
-        <div class="casino-card">
-          <span class="badge badge-soon">Coming Soon</span>
-          <h3>Jackbit Casino</h3>
-          <p>
-            Additional brand placeholder for future GEO testing and review-page expansion.
-          </p>
-          <div class="button-row">
-            <span class="mini-btn mini-soon">Review Coming Soon</span>
-          </div>
-        </div>
+<div class="geo">
+Available in: Italy
+</div>
 
-      </div>
-    </section>
+<div class="bonus">
+Welcome bonus available for Italian players
+</div>
 
-    <section class="section" id="casino-guides">
-      <h2>Casino Guides</h2>
-      <p class="section-lead">
-        GEO pages that support both players and SEO structure.
-      </p>
+<a class="btn"
+href="https://tracking.multitracker.sbs/Tracking/S/69dcd588f53f5862a3dc6bfa"
+target="_blank"
+rel="nofollow sponsored">
 
-      <div class="guide-panel">
-        <h3>Finland Casino Guide</h3>
-        <p>
-          A Finland-focused guide covering casino selection, payment methods, bonus terms and
-          practical review criteria for Finnish players.
-        </p>
-        <div class="button-row" style="margin-top: 18px;">
-          <a class="btn btn-primary" href="finland-casinos.html">Open Guide</a>
-        </div>
-      </div>
-    </section>
+Visit VegaZone
 
-    <section class="section">
-      <div class="info-grid">
+</a>
 
-        <div class="info-box">
-          <h3>How We Review Casinos</h3>
-          <ul>
-            <li>Bonus clarity and realistic promotion structure</li>
-            <li>Payment method overview</li>
-            <li>Mobile usability</li>
-            <li>GEO suitability and player fit</li>
-            <li>Responsible gambling visibility</li>
-          </ul>
-        </div>
+</div>
 
-        <div class="info-box">
-          <h3>Responsible Gambling</h3>
-          <p>
-            Online gambling should be used for entertainment only. Always set limits, read the
-            terms carefully and use only transparent operators whenever possible. 18+ only.
-          </p>
-        </div>
 
-      </div>
-    </section>
+<div class="card">
 
-    <hr>
+<div class="casino">Rolling Slots</div>
 
-    <footer>
-      © 2026 BonusHub.bet — Premium Casino Reviews, Guides & GEO Pages — 18+ Play Responsibly
-    </footer>
+<div class="geo">
+Available in: Germany, Austria
+</div>
 
-  </div>
+<div class="bonus">
+New DE / AT casino campaign
+</div>
+
+<a class="btn"
+href="https://gorollingslots.com/duvn0ldxu"
+target="_blank"
+rel="nofollow sponsored">
+
+Play Rolling Slots
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="casino">Wild Tokyo</div>
+
+<div class="geo">
+Available in: Germany, Austria
+</div>
+
+<div class="bonus">
+New casino brand currently under traffic testing
+</div>
+
+<a class="btn"
+href="https://gowildtokyo.com/dplmdrush"
+target="_blank"
+rel="nofollow sponsored">
+
+Play Wild Tokyo
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© BonusHub.bet | Independent casino review project
+
+</footer>
+
+</div>
 
 </body>
+
 </html>
