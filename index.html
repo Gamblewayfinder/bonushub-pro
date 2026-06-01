@@ -1,683 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Plausible Analytics -->
+  <script defer data-domain="bonushub.bet" src="https://plausible.io/js/script.js"></script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BonusHub.bet | Premium Casino Reviews & Rankings</title>
-  <meta name="description" content="Premium casino reviews, rankings and practical player guides. Explore trusted online casinos, compare offers and discover new brands across key GEO markets." />
-  <link rel="icon" href="favicon.png" type="image/png" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BonusHub.bet - Top Casino Bonuses & Exclusive Deals 2026</title>
+  <meta name="description" content="Discover Top 10 casino bonuses, football summer offers, trusted casino reviews and exclusive iGaming deals from BonusHub.bet." />
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
     :root{
-      --bg:#070b17;
-      --bg2:#0d1327;
-      --card:#121935;
-      --card2:#1a2143;
-      --line:rgba(255,255,255,.08);
-      --text:#f3f6ff;
-      --muted:#aab5d1;
-      --gold:#f4cf3d;
-      --gold2:#ffdd63;
-      --blue:#74b7ff;
-      --green:#6fe18f;
-      --shadow:0 16px 40px rgba(0,0,0,.35);
-      --radius:18px;
-      --max:1240px;
+      --bg-1:#070b12; --bg-2:#111827; --bg-3:#182033;
+      --card:#121a2a; --card-2:#1b2438; --line:rgba(255,255,255,.10);
+      --gold:#f5d061; --gold-2:#ffd66b; --teal:#47e7d5; --pink:#ff5ba6; --lime:#7efc6b;
+      --white:#fff; --muted:#a9b4c8; --soft:#dce7fb;
+      --shadow:rgba(0,0,0,.48); --gold-glow:rgba(245,208,97,.28); --neon-glow:rgba(71,231,213,.24); --pink-glow:rgba(255,91,166,.22);
+      --radius:18px; --radius-lg:26px; --speed:.25s;
     }
-
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top center, rgba(68,20,90,.45), transparent 35%),
-        linear-gradient(180deg, #060813 0%, #090d1c 40%, #0a1021 100%);
-    }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
+      radial-gradient(900px 560px at 12% -8%, rgba(71,231,213,.12), transparent 60%),
+      radial-gradient(900px 640px at 98% 0%, rgba(255,91,166,.13), transparent 60%),
+      linear-gradient(135deg,var(--bg-2),var(--bg-1));color:var(--white);line-height:1.55;-webkit-font-smoothing:antialiased}
+    a{color:inherit}.container{max-width:1220px;margin:0 auto;padding:0 20px}.section{padding:54px 0 8px}.section-title{text-align:center;color:var(--gold);font-size:clamp(24px,3.4vw,34px);line-height:1.15;margin-bottom:12px;text-shadow:0 10px 30px var(--gold-glow)}.subtitle{text-align:center;color:var(--muted);max-width:820px;margin:0 auto 28px}
+    .hero{padding:34px 0 26px}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}.brand{display:flex;align-items:center;gap:12px;padding:9px 15px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.25) inset,0 8px 22px var(--neon-glow);font-weight:800;letter-spacing:.25px}.brand .name{color:var(--gold)}
+    .football-banner{width:100%;max-width:1060px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(245,208,97,.28);box-shadow:0 18px 56px rgba(0,0,0,.48),0 0 38px rgba(245,208,97,.14);background:#111;margin-top:4px}.football-banner img{width:100%;display:block;height:auto}.season-strip{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border-radius:999px;background:linear-gradient(90deg,rgba(245,208,97,.18),rgba(71,231,213,.12));border:1px solid rgba(245,208,97,.26);color:#f5f9ff;font-weight:800;font-size:14px}
+    h1{font-size:clamp(32px,5vw,54px);line-height:1.06;max-width:920px;background:linear-gradient(180deg,#fff 0%,#edf4ff 56%,#c7d3e8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 10px 30px var(--shadow)}.hero p{max-width:800px;color:var(--muted);font-size:clamp(15px,2.2vw,18px)}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.btn,.btn-alt{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:14px;text-decoration:none;font-weight:900;letter-spacing:.2px;transition:transform var(--speed),box-shadow var(--speed),border-color var(--speed)}.btn{background:linear-gradient(45deg,var(--lime),#a4ff7f);color:#0c1722;box-shadow:0 12px 34px rgba(126,252,107,.28)}.btn-alt{background:rgba(255,255,255,.06);border:1px solid var(--line);color:#edf5ff}.btn:hover,.btn-alt:hover{transform:translateY(-2px)}.btn-alt:hover{border-color:var(--teal);box-shadow:0 10px 26px var(--neon-glow)}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(130px,1fr));gap:14px;width:100%;max-width:760px;margin-top:6px}.stat{background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:14px;text-align:left;box-shadow:0 12px 30px rgba(0,0,0,.28)}.stat-number{display:block;color:var(--gold);font-size:22px;font-weight:900}.stat-label{font-size:12px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted)}
+    .categories{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:8px 0 26px}.chip{padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--muted);font-weight:700}.chip.active{background:linear-gradient(45deg,var(--gold),var(--gold-2));color:#111827;border-color:transparent;box-shadow:0 8px 22px var(--gold-glow)}
+    .casino-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(286px,1fr));gap:22px}.casino-card{position:relative;overflow:hidden;background:linear-gradient(140deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px;box-shadow:0 16px 42px rgba(0,0,0,.42);transition:transform var(--speed),border-color var(--speed),box-shadow var(--speed)}.casino-card:hover{transform:translateY(-5px);border-color:rgba(245,208,97,.75);box-shadow:0 20px 52px var(--gold-glow),0 14px 30px rgba(0,0,0,.45)}.rank{position:absolute;top:15px;right:15px;font-size:12px;font-weight:900;color:#101827;background:linear-gradient(45deg,var(--gold),var(--gold-2));border-radius:999px;padding:5px 10px}.casino-head{display:flex;gap:12px;align-items:center;margin-bottom:12px;padding-right:54px}.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,rgba(245,208,97,.22),rgba(71,231,213,.13));display:flex;align-items:center;justify-content:center;font-size:23px;border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 0 22px rgba(255,255,255,.04)}.casino-name{font-size:19px;font-weight:900;color:#fff}.tag{display:inline-flex;margin-top:4px;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--teal);font-weight:900}.bonus{font-size:19px;font-weight:900;color:var(--gold);margin:8px 0}.geo{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 12px}.geo span{font-size:12px;padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);color:#dbe7f8}.features{list-style:none;display:grid;gap:7px;margin:12px 0 16px;color:var(--muted)}.features li{position:relative;padding-left:21px}.features li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:900}.rating-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:13px;margin-top:4px}.stars{color:var(--gold);letter-spacing:1px;font-size:14px}.review-note{font-size:12px;color:var(--muted)}.claim{width:100%;margin-top:14px}.claim a{width:100%;display:inline-flex;justify-content:center;align-items:center;gap:8px;text-decoration:none;padding:12px 14px;border-radius:13px;background:linear-gradient(45deg,var(--lime),#a4ff7f);color:#0d1721;font-weight:950;text-transform:uppercase;box-shadow:0 10px 28px rgba(126,252,107,.25)}
+    .trust-grid,.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:18px}.info-card,.news-card,.operator-box{background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.022));border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 10px 26px rgba(0,0,0,.25)}.info-title{font-weight:900;color:#f2f7ff;margin-bottom:6px;display:flex;gap:9px;align-items:center}.info-card p,.news-card p{color:var(--muted)}
+    .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}.review{background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 10px 26px rgba(0,0,0,.25)}.review-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:8px}.review strong{color:#fff}.quote{color:var(--soft);font-size:14px}.small-muted{color:var(--muted);font-size:12px;margin-top:8px}
+    .operator-box{max-width:960px;margin:0 auto;text-align:center;border-color:rgba(71,231,213,.22);box-shadow:0 14px 38px var(--neon-glow)}.traffic-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0}.traffic-tags span{padding:9px 12px;border-radius:999px;background:rgba(71,231,213,.10);border:1px solid rgba(71,231,213,.20);font-weight:800;color:#eefcff}.contact-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+    .contact{margin:42px 0 8px;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.contact-card{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:18px}.label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}.value{font-weight:900;display:flex;align-items:center;gap:10px}.value i{color:var(--teal)}.social-links{display:flex;gap:10px;flex-wrap:wrap}.social-link{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--line);text-decoration:none}.responsible{font-size:12px;color:#8f9eb7;text-align:center;max-width:900px;margin:18px auto 0}footer{margin-top:36px;border-top:1px solid var(--line);background:rgba(255,255,255,.02)}.footer-inner{padding:21px 0;text-align:center;color:#98a6be;font-size:14px}.footer-inner strong{color:#eaf2ff}
 
-    a{color:inherit;text-decoration:none}
-
-    .container{
-      width:min(var(--max), calc(100% - 32px));
-      margin:0 auto;
-    }
-
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter: blur(10px);
-      background:rgba(6,9,20,.72);
-      border-bottom:1px solid var(--line);
-    }
-
-    .topbar-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      padding:16px 0;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:800;
-      letter-spacing:.4px;
-    }
-
-    .logo span{
-      color:var(--gold);
-    }
-
-    .nav{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
-    .nav a{
-      padding:10px 14px;
-      border:1px solid rgba(244,207,61,.25);
-      border-radius:999px;
-      color:var(--muted);
-      font-size:14px;
-      transition:.2s ease;
-    }
-
-    .nav a:hover{
-      color:#fff;
-      border-color:rgba(244,207,61,.55);
-      background:rgba(244,207,61,.08);
-    }
-
-    .hero{
-      padding:72px 0 44px;
-    }
-
-    .hero-box{
-      border:1px solid var(--line);
-      border-radius:28px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.03), rgba(255,255,255,.01)),
-        linear-gradient(180deg, rgba(20,28,58,.88), rgba(10,14,30,.96));
-      box-shadow:var(--shadow);
-      padding:56px 34px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero-box::before{
-      content:"";
-      position:absolute;
-      width:320px;
-      height:320px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(244,207,61,.18), transparent 68%);
-      top:-80px;
-      right:-60px;
-      pointer-events:none;
-    }
-
-    .hero-badge{
-      display:inline-block;
-      padding:9px 14px;
-      border-radius:999px;
-      border:1px solid rgba(244,207,61,.35);
-      background:rgba(244,207,61,.08);
-      color:var(--gold2);
-      font-size:13px;
-      font-weight:700;
-      margin-bottom:18px;
-      text-transform:uppercase;
-      letter-spacing:.8px;
-    }
-
-    .hero h1{
-      margin:0 0 16px;
-      font-size:56px;
-      line-height:1.04;
-      max-width:900px;
-    }
-
-    .hero p{
-      margin:0;
-      max-width:820px;
-      font-size:19px;
-      line-height:1.65;
-      color:var(--muted);
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:28px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:50px;
-      padding:0 22px;
-      border-radius:14px;
-      font-weight:800;
-      font-size:16px;
-      transition:.2s ease;
-    }
-
-    .btn-primary{
-      background:linear-gradient(90deg, var(--gold), #ffba08);
-      color:#161616;
-      box-shadow:0 10px 26px rgba(244,207,61,.18);
-    }
-
-    .btn-primary:hover{filter:brightness(1.05)}
-    .btn-secondary{
-      border:1px solid rgba(255,255,255,.16);
-      color:#fff;
-      background:rgba(255,255,255,.03);
-    }
-
-    .btn-secondary:hover{background:rgba(255,255,255,.06)}
-
-    .hero-stats{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:14px;
-      margin-top:28px;
-    }
-
-    .stat{
-      background:rgba(255,255,255,.035);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:18px 16px;
-    }
-
-    .stat strong{
-      display:block;
-      font-size:28px;
-      margin-bottom:6px;
-      color:var(--gold2);
-    }
-
-    .stat span{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .section{
-      padding:24px 0 28px;
-    }
-
-    .section-title{
-      font-size:38px;
-      margin:0 0 12px;
-    }
-
-    .section-subtitle{
-      margin:0 0 28px;
-      color:var(--muted);
-      font-size:17px;
-      line-height:1.6;
-      max-width:820px;
-    }
-
-    .casino-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:22px;
-    }
-
-    .casino-card{
-      background:linear-gradient(180deg, rgba(20,27,56,.96), rgba(12,18,36,.98));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:22px 18px 18px;
-      box-shadow:var(--shadow);
-      display:flex;
-      flex-direction:column;
-      min-height:100%;
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-
-    .casino-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 20px 46px rgba(0,0,0,.42);
-    }
-
-    .casino-top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      margin-bottom:14px;
-    }
-
-    .rank{
-      display:inline-block;
-      font-size:12px;
-      font-weight:800;
-      color:#111;
-      background:var(--gold);
-      padding:6px 10px;
-      border-radius:999px;
-    }
-
-    .score{
-      color:var(--gold2);
-      font-size:14px;
-      font-weight:700;
-    }
-
-    .casino-name{
-      font-size:31px;
-      font-weight:800;
-      margin:4px 0 8px;
-      line-height:1.1;
-    }
-
-    .geo{
-      color:var(--blue);
-      font-size:14px;
-      font-weight:700;
-      margin-bottom:14px;
-    }
-
-    .offer{
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.05);
-      border-radius:14px;
-      padding:14px;
-      font-size:15px;
-      line-height:1.5;
-      margin-bottom:16px;
-      min-height:88px;
-      color:#fff8d3;
-    }
-
-    .offer .code{
-      display:inline-block;
-      margin-top:8px;
-      color:var(--gold2);
-      font-weight:800;
-    }
-
-    .features{
-      list-style:none;
-      margin:0 0 18px;
-      padding:0;
-      font-size:15px;
-      line-height:1.7;
-      color:var(--muted);
-      flex-grow:1;
-    }
-
-    .features li{
-      margin-bottom:4px;
-    }
-
-    .card-actions{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-    }
-
-    .card-actions .btn{
-      min-height:46px;
-      padding:0 12px;
-      font-size:15px;
-    }
-
-    .btn-outline{
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.03);
-      color:#fff;
-    }
-
-    .btn-outline:hover{
-      background:rgba(255,255,255,.06);
-    }
-
-    .info-grid{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:22px;
-      margin-top:30px;
-    }
-
-    .panel{
-      background:linear-gradient(180deg, rgba(19,26,53,.96), rgba(12,17,36,.98));
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:24px;
-      box-shadow:var(--shadow);
-    }
-
-    .panel h3{
-      margin:0 0 12px;
-      font-size:28px;
-    }
-
-    .panel p{
-      margin:0 0 14px;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:16px;
-    }
-
-    .checklist{
-      list-style:none;
-      padding:0;
-      margin:14px 0 0;
-      color:var(--muted);
-      line-height:1.85;
-    }
-
-    .review-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
-      margin-top:12px;
-    }
-
-    .review-card{
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:18px;
-    }
-
-    .review-card h4{
-      margin:0 0 8px;
-      font-size:21px;
-    }
-
-    .review-card p{
-      margin:0 0 14px;
-      color:var(--muted);
-      line-height:1.65;
-      font-size:15px;
-    }
-
-    .review-link{
-      color:var(--gold2);
-      font-weight:700;
-      font-size:15px;
-    }
-
-    .footer{
-      padding:34px 0 50px;
-      color:#7e89a8;
-      text-align:center;
-      font-size:14px;
-    }
-
-    @media (max-width:1100px){
-      .hero h1{font-size:46px}
-      .casino-grid{grid-template-columns:repeat(2,1fr)}
-      .hero-stats{grid-template-columns:repeat(2,1fr)}
-      .info-grid{grid-template-columns:1fr}
-    }
-
-    @media (max-width:680px){
-      .topbar-inner{flex-direction:column;align-items:flex-start}
-      .nav{gap:8px}
-      .hero{padding-top:38px}
-      .hero-box{padding:34px 20px}
-      .hero h1{font-size:36px}
-      .hero p{font-size:17px}
-      .section-title{font-size:31px}
-      .casino-grid{grid-template-columns:1fr}
-      .hero-stats{grid-template-columns:1fr}
-      .review-grid{grid-template-columns:1fr}
-      .card-actions{grid-template-columns:1fr}
-      .casino-name{font-size:28px}
-    }
+    .brand-large{text-align:center;margin-bottom:2px;padding:2px 0 0}.brand-logo{width:min(360px,78vw);height:auto;display:block;margin:0 auto;filter:drop-shadow(0 18px 34px rgba(0,0,0,.55)) drop-shadow(0 0 24px rgba(71,231,213,.18))}.brand-subtitle{margin-top:8px;color:#dce7fb;font-size:clamp(13px,2vw,17px);letter-spacing:1.4px;text-transform:uppercase;font-weight:850;text-shadow:0 0 18px rgba(71,231,213,.16)}.coming-soon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(286px,1fr));gap:22px;max-width:720px;margin:0 auto}.soon-card{opacity:.92;border-style:dashed}.soon-badge{display:inline-flex;margin-top:4px;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#101827;background:linear-gradient(45deg,#dce7fb,#ffffff);border-radius:999px;padding:5px 9px;font-weight:950}.inactive-btn{width:100%;display:inline-flex;justify-content:center;align-items:center;gap:8px;text-decoration:none;padding:12px 14px;border-radius:13px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);color:#dce7fb;font-weight:950;text-transform:uppercase;cursor:not-allowed}.news-card a{text-decoration:none}.read-more{display:inline-flex;margin-top:12px;color:var(--gold);font-weight:900;text-decoration:none}.read-more:hover{text-decoration:underline}
+    @media(max-width:720px){.brand-logo{width:min(270px,82vw)}.hero{padding-top:24px}.stats{grid-template-columns:1fr}.casino-grid{grid-template-columns:1fr}.football-banner{border-radius:18px}.contact-actions,.hero-actions{width:100%}.btn,.btn-alt{width:100%}}
   </style>
 </head>
 <body>
-
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="logo">BonusHub<span>.bet</span></div>
-      <nav class="nav">
-        <a href="#top-casinos">Top Casinos</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#why-us">Why Us</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-box">
-        <div class="hero-badge">Premium Casino Reviews Portal</div>
-        <h1>Trusted Casino Reviews, Rankings and Practical Player Guides</h1>
-        <p>
-          BonusHub.bet is a casino review and comparison project focused on practical offers,
-          new brand testing and structured casino discovery across selected GEO markets.
-        </p>
-
+  <div class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="brand-large"><img class="brand-logo" src="BonusHubBet.png" alt="BonusHub logo"><div class="brand-subtitle">Premium Casino Reviews & Exclusive Deals</div></div>
+        <div class="football-banner"><img src="a_dramatic_high_energy_sports_promotional_banner.png" alt="Football Summer 2026 CA USA MEX casino bonus banner"></div>
+        <div class="season-strip">⚽ Football Summer 2026 Special Offers Available</div>
+        <h1>Top Casino Bonuses & Exclusive Deals 2026</h1>
+        <p>Hand-picked casino offers, football promotions and trusted gaming brands reviewed for players who want clear bonuses, fast access and mobile-friendly casino experiences.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#top-casinos">Explore Top Casinos</a>
-          <a class="btn btn-secondary" href="#reviews">Read Reviews</a>
+          <a class="btn" href="#top-casinos">View Top Casinos</a>
+          <a class="btn-alt" href="#operators">Partner With Us</a>
         </div>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>5</strong>
-            <span>Active brands featured</span>
-          </div>
-          <div class="stat">
-            <strong>EU</strong>
-            <span>Main market focus</span>
-          </div>
-          <div class="stat">
-            <strong>SEO</strong>
-            <span>Review-driven traffic model</span>
-          </div>
-          <div class="stat">
-            <strong>2026</strong>
-            <span>New rankings and tests</span>
-          </div>
+        <div class="stats">
+          <div class="stat"><span class="stat-number">Top 10</span><span class="stat-label">Casino shortlist</span></div>
+          <div class="stat"><span class="stat-number">2026</span><span class="stat-label">Updated offers</span></div>
+          <div class="stat"><span class="stat-number">CPA</span><span class="stat-label">Partner traffic ready</span></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ⚽ FOOTBALL SUMMER 2026 PROMO BANNER -->
-  <section style="padding:0 0 40px; background:transparent;">
-    <div style="width:min(1240px, calc(100% - 32px)); margin:0 auto;">
-      <a href="https://bonushub.bet/#top-casinos" style="display:block; text-decoration:none; border-radius:16px; overflow:hidden; box-shadow:0 8px 40px rgba(0,0,0,0.5); position:relative; transition:transform 0.2s ease;" onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663144616466/sHrxsdYAnswLPBwS.png" alt="2026 Football Summer – Odds, Action and Big-Match Excitement. CA | USA | MEX – BonusHub.bet" style="width:100%; height:auto; display:block; border-radius:16px;" loading="eager" />
-      </a>
-      <p style="text-align:center; font-size:11px; color:rgba(255,255,255,0.35); margin:8px 0 0; letter-spacing:0.5px;">18+ | Gamble Responsibly | T&amp;C Apply | BonusHub.bet</p>
-    </div>
-  </section>
-  <!-- /FOOTBALL SUMMER 2026 PROMO BANNER -->
-
-  <section class="section" id="top-casinos">
-    <div class="container">
-      <h2 class="section-title">Top Online Casinos</h2>
-      <p class="section-subtitle">
-        A curated selection of casino brands currently being tested and promoted across our review network.
-      </p>
-
+    <section class="section" id="top-casinos">
+      <h2 class="section-title">🔥 Top 10 Casino Bonuses 2026</h2>
+      <p class="subtitle">A clean shortlist of currently promoted brands. Offers can be swapped quickly when new casino partners are added.</p>
+      <div class="categories" aria-label="Browse by Category">
+        <span class="chip active">All</span><span class="chip">Casino</span><span class="chip">Slots</span><span class="chip">Sports</span><span class="chip">Welcome Bonus</span><span class="chip">High Roller</span><span class="chip">New Casinos</span>
+      </div>
       <div class="casino-grid">
-
-        <article class="casino-card">
-          <div class="casino-top">
-            <span class="rank">#1 Featured</span>
-            <span class="score">9.4 / 10</span>
-          </div>
-          <div class="casino-name">LolyBet</div>
-          <div class="geo">Available in: FR / DE / IT / CA / ES / PT</div>
-          <div class="offer">
-            Exclusive Welcome Bonus • CPA €100
-          </div>
-          <ul class="features">
-            <li>✔ Multi-market European coverage</li>
-            <li>✔ Strong bonus presentation</li>
-            <li>✔ Suitable for comparison pages</li>
-            <li>✔ Active affiliate campaign</li>
-          </ul>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="https://www.lolly-bet888.com?faff=843" target="_blank" rel="nofollow sponsored">Play Now</a>
-          </div>
-        </article>
-
-        <article class="casino-card">
-          <div class="casino-top">
-            <span class="rank">#2 Nordics / EU</span>
-            <span class="score">9.1 / 10</span>
-          </div>
-          <div class="casino-name">The StakeHouse</div>
-          <div class="geo">Available in: NO / FI / CA / SE / DE / FR / IE</div>
-          <div class="offer">
-            Welcome Bonus for Nordic &amp; European players
-          </div>
-          <ul class="features">
-            <li>✔ Strong Nordic market presence</li>
-            <li>✔ Broad European GEO coverage</li>
-            <li>✔ Smooth registration flow</li>
-            <li>✔ Active affiliate campaign</li>
-          </ul>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="https://thestakehouse.io/?igst=191e1c56bcece77b3ba0c8f12444bb58&faff=245" target="_blank" rel="nofollow sponsored">Visit Casino</a>
-          </div>
-        </article>
-
-        <article class="casino-card">
-          <div class="casino-top">
-            <span class="rank">#3 EU</span>
-            <span class="score">8.9 / 10</span>
-          </div>
-          <div class="casino-name">Casino148</div>
-          <div class="geo">Available in: DE / AT / CH / BE / FR / ES</div>
-          <div class="offer">
-            Welcome Bonus for European players
-          </div>
-          <ul class="features">
-            <li>✔ Broad Central European coverage</li>
-            <li>✔ Clean registration flow</li>
-            <li>✔ Suitable for comparison pages</li>
-            <li>✔ Active affiliate campaign</li>
-          </ul>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="https://casino148.track360.io/Tracking/click/?affid=2112&campaign=1208&product_id=1&t_type=RegistrationPage&t_lang=EN" target="_blank" rel="nofollow sponsored">Play Now</a>
-          </div>
-        </article>
-
-        <article class="casino-card">
-          <div class="casino-top">
-            <span class="rank">#4 DE / AT</span>
-            <span class="score">8.8 / 10</span>
-          </div>
-          <div class="casino-name">Rolling Slots</div>
-          <div class="geo">Available in: Germany, Austria</div>
-          <div class="offer">
-            DE / AT casino campaign currently active
-          </div>
-          <ul class="features">
-            <li>✔ German-speaking GEO focus</li>
-            <li>✔ CPA model active</li>
-            <li>✔ Suitable for review traffic</li>
-            <li>✔ Good test brand for DE / AT</li>
-          </ul>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="https://gorollingslots.com/duvn0ldxu" target="_blank" rel="nofollow sponsored">Play Now</a>
-            <a class="btn btn-outline" href="rolling-slots-review.html">Read Review</a>
-          </div>
-        </article>
-
+        <article class="casino-card"><div class="rank">#1</div><div class="casino-head"><div class="logo">🎰</div><div><div class="casino-name">Casino148</div><div class="tag">Featured Casino</div></div></div><div class="bonus">Welcome offer available</div><div class="geo"><span>DE</span><span>AT</span><span>CH</span><span>BE</span><span>FR</span><span>ES</span></div><ul class="features"><li>Multi-GEO casino offer</li><li>Fast registration page</li><li>Good fit for bonus traffic</li></ul><div class="rating-row"><div class="stars">★★★★★</div><div class="review-note">User rating 4.8</div></div><div class="claim"><a href="https://casino148.track360.io/Tracking/click/?affid=2112&campaign=1208&product_id=1&t_type=RegistrationPage&t_lang=EN" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#2</div><div class="casino-head"><div class="logo">🎲</div><div><div class="casino-name">Livegame148</div><div class="tag">Live Games</div></div></div><div class="bonus">Live game registration offer</div><div class="geo"><span>DE</span><span>AT</span><span>CH</span><span>BE</span><span>FR</span><span>ES</span></div><ul class="features"><li>Live game focused landing</li><li>Simple account setup</li><li>Good option for live casino fans</li></ul><div class="rating-row"><div class="stars">★★★★★</div><div class="review-note">User rating 4.7</div></div><div class="claim"><a href="https://casino148.track360.io/Tracking/click/?affid=2112&campaign=1208&product_id=2&t_type=LiveGame_Registration&t_lang=EN" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#3</div><div class="casino-head"><div class="logo">🍭</div><div><div class="casino-name">Lolly-Bet</div><div class="tag">Popular Pick</div></div></div><div class="bonus">Welcome offer available</div><div class="geo"><span>FR</span><span>DE</span><span>IT</span><span>CA</span><span>ES</span><span>PT</span></div><ul class="features"><li>Wide GEO coverage</li><li>Casino and sports audience fit</li><li>Clean mobile experience</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">User rating 4.6</div></div><div class="claim"><a href="https://www.lolly-bet888.com?faff=843" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#4</div><div class="casino-head"><div class="logo">🐶</div><div><div class="casino-name">Corgibet</div><div class="tag">Slots Friendly</div></div></div><div class="bonus">Welcome offer available</div><div class="geo"><span>AT</span><span>NO</span><span>BE</span><span>CH</span><span>IT</span></div><ul class="features"><li>Slots-focused traffic fit</li><li>Multiple European GEOs</li><li>Mobile-friendly casino flow</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">User rating 4.5</div></div><div class="claim"><a href="https://track.coolaffs.com/visit/?bta=37155&nci=5377&Afp10=Seo" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#5</div><div class="casino-head"><div class="logo">🌀</div><div><div class="casino-name">Rolling Slots</div><div class="tag">Slots</div></div></div><div class="bonus">Slots welcome offer</div><div class="geo"><span>AT</span><span>DE</span></div><ul class="features"><li>Slot-first positioning</li><li>Easy bonus navigation</li><li>Good for returning players</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">User rating 4.5</div></div><div class="claim"><a href="https://gorollingslots.com/duvn0ldxu" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#6</div><div class="casino-head"><div class="logo">🧲</div><div><div class="casino-name">Magneticslots</div><div class="tag">Multi-GEO Slots</div></div></div><div class="bonus">Welcome offer available</div><div class="geo"><span>AT</span><span>BE</span><span>IE</span><span>IT</span><span>NO</span><span>FI</span></div><ul class="features"><li>Strong slots identity</li><li>Broad European GEO coverage</li><li>Good bonus page candidate</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">User rating 4.4</div></div><div class="claim"><a href="https://track.coolaffs.com/visit/?bta=37155&nci=5416&Afp10=Seo" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#7</div><div class="casino-head"><div class="logo">🎯</div><div><div class="casino-name">Slotuna</div><div class="tag">Germany Offer</div></div></div><div class="bonus">DE casino welcome offer</div><div class="geo"><span>DE</span></div><ul class="features"><li>Germany-focused casino offer</li><li>Simple registration flow</li><li>Slots traffic suitable</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">User rating 4.4</div></div><div class="claim"><a href="https://beardorbit.com/api/v3/offer/4810?aff_sub3=sltseode&affiliate_id=2526&url_id=7929" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#8</div><div class="casino-head"><div class="logo">🗼</div><div><div class="casino-name">Wild Tokyo</div><div class="tag">New Casino</div></div></div><div class="bonus">Welcome offer available</div><div class="geo"><span>AT</span><span>DE</span></div><ul class="features"><li>Modern casino theme</li><li>Good slot promotion potential</li><li>Quick access landing</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">User rating 4.3</div></div><div class="claim"><a href="https://gowildtokyo.com/dplmdrush" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#9</div><div class="casino-head"><div class="logo">⚽</div><div><div class="casino-name">Sportuna</div><div class="tag">Sports</div></div></div><div class="bonus">DE sports registration offer</div><div class="geo"><span>DE</span></div><ul class="features"><li>Football audience fit</li><li>Sports-first positioning</li><li>Useful for seasonal campaigns</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">User rating 4.3</div></div><div class="claim"><a href="https://beardorbit.com/api/v3/offer/4811?aff_sub3=sprseode&affiliate_id=2526&url_id=7930" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
+        <article class="casino-card"><div class="rank">#10</div><div class="casino-head"><div class="logo">🏛️</div><div><div class="casino-name">Lanista</div><div class="tag">Germany Offer</div></div></div><div class="bonus">DE casino welcome offer</div><div class="geo"><span>DE</span></div><ul class="features"><li>Germany-focused landing</li><li>Clear casino registration</li><li>Good replacement slot candidate</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">User rating 4.2</div></div><div class="claim"><a href="https://beardorbit.com/api/v3/offer/4812?aff_sub3=lstseode&affiliate_id=2526&url_id=7931" target="_blank" rel="nofollow sponsored noopener">Claim Bonus</a></div></article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="why-us">
-    <div class="container">
-      <div class="info-grid">
-        <div class="panel">
-          <h3>Why Players Use BonusHub</h3>
-          <p>
-            We focus on clear casino positioning, practical bonus information and easy-to-scan rankings.
-            Instead of overloading users with unnecessary details, we present casino brands in a structured way.
-          </p>
-          <ul class="checklist">
-            <li>✔ Casino review and comparison format</li>
-            <li>✔ New and active brands added regularly</li>
-            <li>✔ GEO-specific placements where relevant</li>
-            <li>✔ Structured pages suitable for both users and SEO</li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <h3>Review Focus</h3>
-          <p>
-            BonusHub.bet is positioned as a premium review portal, while bonus-heavy promotions and faster offer rotations
-            are handled on separate subprojects.
-          </p>
-          <ul class="checklist">
-            <li>✔ Better long-term SEO potential</li>
-            <li>✔ Cleaner brand presentation</li>
-            <li>✔ Stronger trust for casino operators</li>
-            <li>✔ More room for future GEO expansion</li>
-          </ul>
-        </div>
+    <section class="section" id="coming-soon">
+      <h2 class="section-title">🚀 Coming Soon</h2>
+      <p class="subtitle">Two additional brands are being reviewed for future placement. They are shown separately so the main SEO block stays focused on Top 10.</p>
+      <div class="coming-soon-grid">
+        <article class="casino-card soon-card"><div class="casino-head"><div class="logo">⚡</div><div><div class="casino-name">SuperSlots</div><div class="soon-badge">Coming Soon</div></div></div><div class="bonus">300 Free Spins Welcome Offer</div><div class="geo"><span>USA</span><span>CA</span><span>AU</span><span>NZ</span></div><ul class="features"><li>VIP Rewards Program</li><li>Live Casino available</li><li>Crypto-friendly banking</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">Review pending</div></div><div class="claim"><span class="inactive-btn">Coming Soon</span></div></article>
+        <article class="casino-card soon-card"><div class="casino-head"><div class="logo">🔥</div><div><div class="casino-name">Wild Casino</div><div class="soon-badge">Coming Soon</div></div></div><div class="bonus">250 Free Spins Welcome Offer</div><div class="geo"><span>USA</span><span>CA</span><span>AU</span><span>NZ</span></div><ul class="features"><li>VIP Rewards</li><li>Live Casino and table games</li><li>Crypto accepted</li></ul><div class="rating-row"><div class="stars">★★★★☆</div><div class="review-note">Review pending</div></div><div class="claim"><span class="inactive-btn">Coming Soon</span></div></article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="reviews">
-    <div class="container">
-      <h2 class="section-title">Latest Casino Reviews</h2>
-      <p class="section-subtitle">
-        Detailed review pages help users compare casino brands and support long-term organic visibility.
-      </p>
-
-      <div class="review-grid">
-        <article class="review-card">
-          <h4>LolyBet Casino Review</h4>
-          <p>
-            A closer look at LolyBet's multi-market coverage, bonus structure and suitability for FR / DE / IT traffic.
-          </p>
-          <a class="review-link" href="https://www.lolly-bet888.com?faff=843" target="_blank" rel="nofollow">Visit LolyBet →</a>
-        </article>
-
-        <article class="review-card">
-          <h4>The StakeHouse Review</h4>
-          <p>
-            Overview of The StakeHouse for Nordic and European players, including offer positioning and GEO fit.
-          </p>
-          <a class="review-link" href="https://thestakehouse.io/?igst=191e1c56bcece77b3ba0c8f12444bb58&faff=245" target="_blank" rel="nofollow">Visit StakeHouse →</a>
-        </article>
-
-        <article class="review-card">
-          <h4>Rolling Slots Review</h4>
-          <p>
-            Review page for the DE / AT test campaign with a focus on practical casino comparison structure.
-          </p>
-          <a class="review-link" href="rolling-slots-review.html">Open review →</a>
-        </article>
-
-        <article class="review-card">
-          <h4>Wild Tokyo Review</h4>
-          <p>
-            Introductory review page for Wild Tokyo and its potential fit for German-speaking GEOs.
-          </p>
-          <a class="review-link" href="wild-tokyo-review.html">Open review →</a>
-        </article>
+    <section class="section">
+      <h2 class="section-title">Why Players Choose BonusHub.bet</h2>
+      <p class="subtitle">Simple, fast and practical casino bonus discovery without unnecessary noise.</p>
+      <div class="trust-grid">
+        <div class="info-card"><div class="info-title">🛡️ Verified Offers</div><p>We focus on real partner links and offers that can be updated quickly.</p></div>
+        <div class="info-card"><div class="info-title">🎁 Exclusive Bonuses</div><p>Selected casino deals, welcome offers and seasonal football promotions.</p></div>
+        <div class="info-card"><div class="info-title">⚡ Fast Updates</div><p>New casino partners can be added to the Top 10 without rebuilding the page.</p></div>
+        <div class="info-card"><div class="info-title">⭐ Trusted Reviews</div><p>Clear review layout with ratings, quick notes and player-friendly highlights.</p></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    © BonusHub.bet | Independent casino review project
-  </footer>
+    <section class="section">
+      <h2 class="section-title">Player Feedback Highlights</h2>
+      <p class="subtitle">A review-style section inspired by casino comparison pages. Text can be replaced with real feedback later.</p>
+      <div class="reviews">
+        <div class="review"><div class="review-top"><strong>Fast bonus access</strong><span class="stars">★★★★★</span></div><p class="quote">“The Top 10 layout makes it easy to compare offers without opening ten different tabs.”</p><p class="small-muted">Review-style placeholder · replace with real feedback when available</p></div>
+        <div class="review"><div class="review-top"><strong>Good for mobile</strong><span class="stars">★★★★☆</span></div><p class="quote">“The cards are clear, buttons are visible and GEO information is easy to understand.”</p><p class="small-muted">Review-style placeholder · replace with real feedback when available</p></div>
+        <div class="review"><div class="review-top"><strong>Football promos</strong><span class="stars">★★★★☆</span></div><p class="quote">“Football summer offers are visible immediately, which makes the page feel fresh.”</p><p class="small-muted">Review-style placeholder · replace with real feedback when available</p></div>
+      </div>
+    </section>
 
+    <section class="section" id="operators">
+      <div class="operator-box">
+        <h2 class="section-title" style="margin-bottom:10px">For Operators & Affiliate Managers</h2>
+        <p class="subtitle" style="margin-bottom:0">Looking for quality casino traffic? BonusHub works with performance-focused iGaming campaigns and CPA-based partnerships.</p>
+        <div class="traffic-tags"><span>Facebook Ads</span><span>SEO Traffic</span><span>PPC Traffic</span><span>SMS Traffic</span><span>CPA Campaigns</span></div>
+        <div class="contact-actions"><a class="btn" href="https://t.me/Bonushubbet" target="_blank" rel="noopener">Contact on Telegram</a><a class="btn-alt" href="mailto:affiliate@bonushub.bet">Email Us</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Latest Casino News</h2>
+      <p class="subtitle">Reserved space for short updates. This helps the site feel active even before full blog articles are ready.</p>
+      <div class="news-grid">
+        <div class="news-card"><a href="https://gamblingwayfinder.com/new-casino-launches-corgibet-and-magneticslots-now-available/" target="_blank" rel="noopener"><div class="info-title">🆕 New Casino Launches</div><p>Corgibet and Magneticslots are now available for selected European GEOs.</p><span class="read-more">Read More →</span></a></div>
+        <div class="news-card"><a href="https://gamblingwayfinder.com/wagering-requirements-explained-what-every-bonus-hunter-needs-to-know/" target="_blank" rel="noopener"><div class="info-title">🎁 Bonus Updates</div><p>A practical guide explaining wagering requirements and how bonus hunters should compare offers.</p><span class="read-more">Read More →</span></a></div>
+        <div class="news-card"><a href="https://gamblingwayfinder.com/football-summer-2026-best-sportsbook-bonuses-for-ca-usa-and-mex-players/" target="_blank" rel="noopener"><div class="info-title">⚽ Football Promotions</div><p>Football Summer 2026 sportsbook bonus overview for CA, USA and MEX players.</p><span class="read-more">Read More →</span></a></div>
+      </div>
+      <p class="subtitle" style="margin-top:22px"><a class="read-more" href="https://gamblingwayfinder.com/blog/" target="_blank" rel="noopener">View all GamblingWayFinder blog posts →</a></p>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-card"><div class="label">Email Us</div><div class="value"><i class="fas fa-envelope"></i><a href="mailto:affiliate@bonushub.bet">affiliate@bonushub.bet</a></div></div>
+      <div class="contact-card"><div class="label">Contact Us</div><div class="social-links"><a href="https://t.me/Bonushubbet" target="_blank" class="social-link"><i class="fab fa-telegram"></i><span>@Bonushubbet</span></a><a href="https://x.com/bonus_hub" target="_blank" class="social-link"><i class="fab fa-x-twitter"></i><span>@bonus_hub</span></a></div></div>
+      <div class="contact-card"><div class="label">Latest News</div><div class="value"><i class="fas fa-rss"></i><a href="https://gamblingwayfinder.com/blog/" target="_blank" rel="noopener">GamblingWayFinder Blog</a></div><p style="font-size:12px;color:var(--muted);margin-top:8px">Industry news and bonus guides</p></div>
+    </section>
+    <p class="responsible">18+ only. Please gamble responsibly. Bonus availability and terms may vary by country, operator and campaign. Always check the casino terms before claiming any offer.</p>
+  </div>
+  <footer><div class="container footer-inner"><div>&copy; <span id="year"></span> <strong>BonusHub.bet</strong>. Gamble Responsibly.</div><div>Premium Casino Reviews & Exclusive Deals</div></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
